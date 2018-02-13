@@ -11,12 +11,21 @@
 
 import React from 'react';
 import { Button } from 'reactstrap';
-
+import Corl from '../../components/Corl/Corl';
+import Banner from '../../components/Banner/Banner';
+import Benifits from '../../components/Benifits/Benifits';
+import Revenue from '../../components/Revenue/Revenue';
+import Works from '../../components/Works/Works';
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <div>
-        <Button>khan</Button>
+      <div className="main-content home-content">
+        <Banner />
+        <Corl />
+        <Works />
+        <Benifits />
+        <Revenue />
+        <Corl />
       </div>
 
     );

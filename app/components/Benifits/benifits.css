@@ -1,0 +1,37 @@
+
+.benefits-investor .container-inner-padd:first-child{
+	margin-bottom: 20px;
+}
+.benefits-block-container{
+	width: 66.8%;
+}
+.benefits-block{
+	border: 1px solid #e6e9ea;
+	border-radius: 8px;
+	padding: 20px;
+}
+.benefits-block .benefits-detail{
+	padding: 20px
+}
+.benefits-block .benefits-detail-head{
+	margin-bottom: 28px;
+}
+.benefits-block h4{
+	margin-left: 6px;
+}
+.benefits-block .benefits-detail-img img{
+	width: 32px;
+	height: 32px;
+}
+.benefits-list{
+	margin: 50px 0px 28px 5px;
+}
+.benefits-list li{
+	line-height: 22px;
+	color: rgba(59,59,60,0.8);
+	display: block;
+	background: url('./circle-bullet.png') no-repeat 0px 2px;
+	list-style: none;
+	margin-bottom: 30px;
+	padding-left: 30px;
+}

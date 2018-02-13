@@ -13,6 +13,7 @@
 
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import 'font-awesome/css/font-awesome.min.css';
 
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
@@ -22,7 +23,7 @@ import WhitePaper from '../WhitePaper/WhitePaper';
 
 export default function App() {
   return (
-    <div>
+    <div className="off-canvas-container">
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />

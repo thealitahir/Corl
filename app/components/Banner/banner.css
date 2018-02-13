@@ -1,0 +1,102 @@
+
+  /*
+  ======================================================
+  revenue sharing
+  ======================================================
+  */
+  
+  
+  .revenue-sharing{
+    background-position: bottom right;
+    background-image: url('./header-illustration-tablet.png');
+    background-size: cover;
+  }
+  .revenue-sharing .conatiner-wide{
+    width: 94%;
+  }
+  .revenue-sharing-content {
+    margin-top: 25%;
+  }
+  .revenue-sharing-content h1{
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 26px;
+  }
+  .revenue-sharing-content p{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #212529;
+  }
+  
+  
+  /*
+  ======================================================
+  revenue sharing
+  ======================================================
+  */
+  
+  
+  
+  
+  
+  
+  
+  /*
+  ======================================================
+  media et
+  ======================================================
+  */
+  
+  
+  .media-et{
+    padding-bottom: 4px;
+  }
+  .six-columns{
+    background-color: #fafafa;
+    padding: 10px 150px;
+    max-width: 100%;
+    display: inline-block;
+  }
+  .media-et-module{
+    width: 16.66%;
+    float: left;
+    -webkit-animation-duration: .2s;
+    -moz-animation-duration: .2s;
+    -o-animation-duration: .2s;
+    animation-duration: .2s;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+  .media-et-module span img{
+    height: 35px;
+  }
+  .mtlintech-module span img{
+    height: auto;
+  }
+  .media-et-module-combine{
+    margin-right: 5px;
+    margin-left: 5px;
+    float: left;
+  }
+  .media-et-module-combine .techvibes-module,
+  .media-et-module-combine .banknxt-module{
+    width: auto;
+    float: initial;
+  }
+  .media-et-module-combine .techvibes-module span img,
+  .media-et-module-combine .banknxt-module span img{
+    height: 20px;
+    margin-top: 5px;
+  }
+  
+  
+  
+  /*
+  ======================================================
+  media et
+  ======================================================
+  */
+  

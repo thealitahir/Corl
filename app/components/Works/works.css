@@ -1,0 +1,28 @@
+.section-lines:before{
+	content: '';
+	width: 0;
+	height: 0;
+	float: left;
+	border-top: solid 68px #FFF;
+	border-left: solid 0px transparent;
+	border-right: solid 2500px transparent;
+	position: absolute;
+	right: 0;
+	top: -1px;
+}
+.section-lines:after{
+	content: '';
+	width: 0;
+	height: 0;
+	float: left;
+	border-bottom: solid 64px #FFF;
+	border-left: solid 0px transparent;
+	border-right: solid 2500px transparent;
+	position: absolute;
+	right: 0;
+	bottom: -1px;
+	z-index: 9;
+}
+.how-works .how-works-img img{
+	max-width: 645px;
+}
