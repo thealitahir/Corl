@@ -1,5 +1,8 @@
 import React from 'react';
-import "./footer.css"
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import "./footer.css";
+
 class Footer extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
@@ -9,9 +12,9 @@ class Footer extends React.Component { // eslint-disable-line react/prefer-state
             <div className="col col-12 col-lg-3 col-sm-6">
               <h4 className="title">Company</h4>
               <ul id="menu-footer-company" className="menu">
-                <li id="menu-item-26845" className="menu-item"><a href="https://corl.io/about/">About</a></li>
+                <li id="menu-item-26845" className="menu-item"><a onClick={() => this.props.history.push('/about')}>About</a></li>
                 <li id="menu-item-26851" className="menu-item"><a href="https://corl.io/press/">Press</a></li>
-                <li id="menu-item-26921" className="menu-item"><a href="https://corl.io/contact/">Contact Us</a></li>
+                <li id="menu-item-26921" className="menu-item"><a onClick={() => this.props.history.push('/contact')}>Contact Us</a></li>
                 <li id="menu-item-26922" className="menu-item"><a target="_blank" href="https://angel.co/corl/jobs">Careers</a></li>
               </ul>
             </div>
@@ -19,14 +22,14 @@ class Footer extends React.Component { // eslint-disable-line react/prefer-state
               <h4 className="title">LEARN</h4>
               <ul id="menu-footer-learn" className="menu">
                 <li id="menu-item-28538" className="menu-item"><a href="https://blog.corl.io/">Blog</a></li>
-                <li id="menu-item-26924" className="menu-item"><a href="https://corl.io/faq/">FAQ</a></li>
+                <li id="menu-item-26924" className="menu-item"><a href="#">FAQ</a></li>
               </ul>
             </div>
             <div className="col col-12 col-lg-3 col-sm-6">
               <h4 className="title">LEGAL</h4>
               <ul id="menu-footer-legal" className="menu">
-                <li id="menu-item-26927" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-26927"><a href="https://corl.io/terms/">Terms of Use</a></li>
-                <li id="menu-item-26926" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-26926"><a href="https://corl.io/privacy/">Privacy Policy</a></li>
+                <li id="menu-item-26927" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-26927"><a onClick={() => this.props.history.push('/term')}>Terms of Use</a></li>
+                <li id="menu-item-26926" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-26926"><a onClick={() => this.props.history.push('/privacy')}>Privacy Policy</a></li>
               </ul>
             </div>
             <div className="col col-12 col-lg-3 col-sm-6">
@@ -58,4 +61,4 @@ class Footer extends React.Component { // eslint-disable-line react/prefer-state
   }
 }
 
-export default Footer;
+export default withRouter(connect(null, null)(Footer));

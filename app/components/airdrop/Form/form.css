@@ -1,0 +1,57 @@
+.fill-form h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+  }
+  .form-field{
+      max-width: 430px;
+      float: none;
+      margin: 0 auto;
+      padding: 0 20px;
+      padding-bottom: 1em;
+  }
+  .select-field,
+  .input-field{
+      display: block;
+      width: 100%;
+      height: 40px;
+      margin: 0 0 0.5em;
+      font-family: inherit;
+      font-size: 16px;
+      color: #3B3B3C;
+      background-color: #ffffff;
+      border: 1px solid #b2b2b2;
+      font-weight: 400;
+      box-shadow: inset 0px 2px 3px #dddddd;
+      border-radius: 3px;
+      padding: 10px;
+  }
+  input[type="submit"].submit-btn {
+      cursor: pointer;
+    color: #ffffff;
+    background-color: #97C355;
+    font-weight: 600;
+    padding: 0.3em 1em;
+    transition: all 0.5s;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 20px;
+    height: 45px;
+    line-height: 1.7;
+  }
+  .select-field:focus,
+  .input-field:focus{
+    border-color: #97C355;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(151,195,85,0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(151,195,85,0.6);
+  }
+  .mc_form_submit_subscription {
+      text-align: center;
+  }
+  
+  

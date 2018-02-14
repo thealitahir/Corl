@@ -47,6 +47,9 @@ injectGlobal`
   img{
     max-width: 100%;
   }
+  .text-green{
+    color: #97C355;
+  }
   button:focus{
     outline: none;
   }
@@ -72,7 +75,7 @@ injectGlobal`
     padding-top: 40px;
     padding-bottom: 40px;
   }
-  .conatiner-wide{
+  .container-wide{
     width: 92%;
     padding-right: 15px;
     padding-left: 15px;
@@ -125,8 +128,149 @@ injectGlobal`
     padding-bottom: 0;
   }
   
-  
-  
+  .choose-corl-block .choose-corl-img{
+    margin-bottom: 15px;
+  }
+  .choose-corl-block .choose-corl-img img{
+    width: 70px;
+    height: 70px;
+  }
+  .terms-container{
+    position: relative;
+    width: 90%;
+    max-width: 1920px;
+    margin: auto;
+    padding: 40px 0;
+  }
+  .terms-container h1{
+      padding: 27px 0;
+      font-size: 32px;
+      text-align: center;
+  }
+  .terms-container ul li {
+      list-style: inherit;
+  }
+  .italic-text{
+    background-color: #ffffff; font-size: 16px;
+  }
+
+
+
+
+
+
+
+  /*
+  ===contact=================
+  */
+ .contact-us h1 {
+  color: #97c355!important;
+  font-size: 26px;
+  position: relative;
+  padding-bottom: 16px;
+  font-weight: 500;
+  text-align: left;
+}
+.contact-us input, 
+.contact-us textarea {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  color: #999;
+  background-color: #eee;
+  font-size: 14px;
+  border-radius: 3px;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+.contact-us textarea{
+  min-height: 150px;
+}
+.contact-us .et_pb_contact_select {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px 20px 16px 10px;
+  border: 0;
+  border-radius: 0;
+  color: #999;
+  background-color: #eee;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 3px;
+}
+.select-arrow {
+  position: relative;
+  display: block;
+  margin-bottom: 25px;
+}
+.select-arrow:after {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 0;
+  height: 0;
+  margin-top: 3px;
+  border: 6px solid;
+  border-color: #666 transparent transparent transparent;
+  content: "";
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.et_contact_bottom_container {
+  float: right;
+  margin-top: -1.5%;
+  text-align: right;
+}
+.et_pb_contact_right {
+  display: inline-block;
+  min-width: 105px;
+  margin: 0;
+  text-align: right;
+}
+.et_pb_contact_submit{
+  font-size: 18px;
+  background: #03aac4;
+  border-color: #03aac4;
+  border-radius: 20px;
+  padding: .3em 1em!important;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 45px;
+  margin-left: 10px;
+  border: 2px solid transparent;
+}
+.et_pb_contact_submit:hover {
+  background: #338cad!important;
+  border-color: #338cad!important;
+  border-radius: 20px;
+}
+.et_pb_contact_right p input {
+max-width: 50px;
+padding: 16px;
+}
+.contact-us input:focus, 
+.contact-us textarea:focus,
+.contact-us select:focus {
+  outline: none;
+}
+.contact-us h5 {
+  font-size: 16px;
+}
+.contact-us  .contact-heading h1 {
+  font-size: 32px;
+}
+.contact-us code,
+.contact-us  pre {
+margin-bottom: 10px;
+word-break: break-all;
+}
+
+  // ================================
   /*
   ======================================================
   combine css
@@ -154,6 +298,10 @@ injectGlobal`
 		position: absolute;
 		top: 75px;
 		right: 0;
+	}
+	.container-we-stack{
+		margin-right: 10%;
+		margin-left: 10%;
 	}
 }
 @media(max-width: 991px){
@@ -200,10 +348,24 @@ injectGlobal`
 	}
 	.view-faqs .row .col:first-child .view-faqs-detail{
 		margin-bottom: 20px;
-  }
-  .revenue-sharing-content {
-    margin-top: 10%;
- }
+	}
+	.financing-process .financing-process-top{
+		padding-top: 8px;
+	}
+	.companies-content .container-wide{
+		width: 96%;
+	}
+	.we-stack-desktop{
+		display: none;
+	}
+	.we-stack-tablet{
+		display: block;
+	}
+	.container-we-stack{
+		width: 94%;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
 }
 @media(max-width: 768px){
 	.six-columns{
@@ -215,5 +377,9 @@ injectGlobal`
 	.media-et-module{
 		margin-bottom: 10px;
 	}
+	.similar-heading{
+		font-size: 24px;
+	}
 }
+
 `;

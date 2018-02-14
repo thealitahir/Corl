@@ -27,8 +27,13 @@
 	font-size: 14px;
 	color: rgba(255,255,255,.7);
 	text-decoration: none;
+	cursor: pointer;
 }
-.footer ul li a:hover {
+.footer ul li a:not([href]):not([tabIndex]){
+	color: rgba(255,255,255,.7);
+}
+.footer ul li a:hover,
+.footer ul li a:not([href]):not([tabIndex]):hover{
 	color: rgba(255,255,255, 1);
 }
 #footer-bottom {

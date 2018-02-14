@@ -1,0 +1,27 @@
+
+.team-block .team-block-img{
+	margin-bottom: 6px;
+}
+.team-block .team-block-img span{
+	width: 150px;
+	height: 150px;
+	min-width: 150px;
+	min-height: 150px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.team-block .team-block-detail p{
+	color: #3b3b3c;
+}
+.team-social-account a{
+	color: #b2b2b2;
+	font-size: 18px;
+	text-decoration: none;
+	-webkit-transition: color .3s ease 0s;
+	-moz-transition: color .3s ease 0s;
+	transition: color .3s ease 0s;
+}
+.team-social-account a:hover,
+.team-social-account a:focus{
+	color: #03aac4;
+}

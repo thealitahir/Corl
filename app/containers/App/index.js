@@ -20,6 +20,13 @@ import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import WhitePaper from '../WhitePaper/WhitePaper';
+import Companies from '../Companies/Companies';
+import AirDrop from '../AirDrop/AirDrop';
+import Term from '../Term/Term';
+import Privacy from '../Privacy/Privacy';
+import Investor from '../Investor/Investor';
+import About from '../About/About';
+import Contact from '../Contact/Contact';
 
 export default function App() {
   return (
@@ -28,6 +35,13 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path='/whitepaper' component={WhitePaper} />
+        <Route path='/companies' component={Companies} />
+        <Route path='/airdrop' component={AirDrop} />
+        <Route path='/term' component={Term} />
+        <Route path='/privacy' component={Privacy} />
+        <Route path='/investor' component={Investor} />
+        <Route path='/about' component={About} />
+        <Route path='/contact' component={Contact} />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer />

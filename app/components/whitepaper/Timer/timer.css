@@ -1,0 +1,101 @@
+.et_pb_section-time {
+	padding: 40px 0;
+	margin-top: 50px;
+}
+.et_pb_section-time .timer-container {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: #fff;
+  overflow-x: hidden;
+  box-shadow: 0 0 35px rgba(0,0,0,0.1);
+  border: 1px solid #ebebeb;
+	position: relative;
+	width: 90%;
+	max-width: 1920px;
+	margin: auto;
+}
+.et_pb_countdown_timer .et_pb_countdown_timer_container{
+  position:relative;
+  width:100%;
+  text-align:center;
+}
+.et_pb_countdown_timer .title{
+  margin:0 0 30px;
+  padding:0;
+  font-weight:500;
+  text-align:center;
+}
+.et_pb_countdown_timer h4.title{
+  font-size:26px;
+}
+.et_pb_countdown_timer .section{
+  display:inline-block;
+  position:relative;
+}
+.et_pb_countdown_timer .section.values{
+  width:17%;
+  max-width:160px;
+}
+.et_pb_countdown_timer .section p{
+  display:inline-block;
+  padding-bottom:0;
+  font-size:54px;
+  line-height:54px;
+  text-align:center;
+  margin-bottom : 0;
+}
+.et_pb_countdown_timer .section.zero p{
+  opacity:.4;
+}
+.et_pb_countdown_timer p.value{
+  min-width:100%;
+  color: #97c355!important;
+}
+.et_pb_countdown_timer p.label{
+  display:block;
+  font-size:14px;
+  line-height:25px;
+  text-align:center
+}
+.et_pb_countdown_timer .sep{
+  position:relative;
+  top:-28px
+}
+.et_pb_column_1_2 .et_pb_countdown_timer .section p{
+  font-size:38px;
+  line-height:38px
+}
+.et_pb_column_1_2 .et_pb_countdown_timer .section p.label{
+  font-size:12px;
+  line-height:20px
+}
+.et_pb_column_1_2 .et_pb_countdown_timer .sep,
+.et_pb_column_1_3 .et_pb_countdown_timer .sep,
+.et_pb_column_1_4 .et_pb_countdown_timer .sep,
+.et_pb_column_3_8 .et_pb_countdown_timer .sep{
+  top:-22px
+}
+
+@media only screen and (max-width: 768px) {
+	.et_pb_countdown_timer .section p {
+		font-size: 32px;
+	}
+	.et_pb_countdown_timer .section p.label {
+		font-size: 14px;
+	}
+	.et_pb_countdown_timer .sep {
+		top: -36px;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.et_pb_countdown_timer .section p {
+		font-size: 24px;
+		line-height: 26px;
+	}
+	.et_pb_countdown_timer .section p.label {
+		font-size: 12px;
+	}
+	.et_pb_countdown_timer .sep {
+		top: -24px;
+	}
+}

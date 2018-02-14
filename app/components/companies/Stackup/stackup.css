@@ -1,0 +1,89 @@
+.companies-sections {
+  background-image: url('./entrepreneurs.jpg')!important;
+  position: relative;
+}
+.companies-sections:after {
+	content: "";
+	background-color: rgba(59,59,60,0.7);    
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: "";
+	pointer-events: none;
+	display: block;
+}
+.companies-sections .revenue-sharing-content {
+	position: relative;
+	z-index: 55;
+}
+.companies-sections .revenue-sharing-content h1, 
+.companies-sections .revenue-sharing-content p {
+	color: #fff !important;
+}
+
+.we-stack-block{
+	padding: 20px 0;
+	border-radius: 3px;
+}
+.we-stack-list .list-group-item{
+	min-height: 60px;
+	line-height: 26px;
+}
+.we-stack-list .stack-list-img{
+	margin-bottom: 10px;
+}
+.we-stack-list .stack-list-img img{
+	max-height: 40px;
+}
+.we-stack-list .list-group-item:first-child{
+	min-height: 103px;
+}
+.we-stack-list .list-group-item:nth-of-type(odd){
+	background: transparent;
+}
+.we-stack-list .list-group-item:nth-of-type(even){
+	background: rgba(152,180,204,0.1);
+}
+.we-stack-block.selected{
+	background: #03aac4;
+	background: -moz-linear-gradient(top,#03aac4 0%,#338cad 100%);
+	background: -webkit-linear-gradient(top,#03aac4 0%,#338cad 100%);
+	background: linear-gradient(to bottom,#03aac4 0%,#338cad 100%);
+}
+.we-stack-block.selected .we-stack-list .list-group-item{
+	color: #fff;
+}
+.we-stack-tablet{
+	display: none;
+}
+.container-we-stack{
+	max-width: 1920px;
+	margin: auto;
+}
+.we-stack-table{
+	border: 1px solid #eee;
+}
+.we-stack-table tbody tr:nth-of-type(odd){
+	background: rgba(152,180,204,0.1);
+}
+.we-stack-table td,
+.we-stack-table th{
+	padding: .5rem;
+	border-top: 1px solid #eee;
+}
+.we-stack-table thead th{
+	border: 0;
+}
+.we-stack-table tbody tr:nth-of-type(even) td:first-child{
+	color: #03aac4;
+	font-weight: bold;
+}
+
+/*
+======================================================
+we stack
+======================================================
+*/
