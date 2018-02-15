@@ -155,7 +155,23 @@ injectGlobal`
   }
 
 
-
+  .revenue-sharing .container-wide{
+    width: 94%;
+  }
+  .revenue-sharing-content {
+    margin-top: 25%;
+  }
+  .revenue-sharing-content h1{
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 26px;
+  }
+  .revenue-sharing-content p{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #212529;
+  }
 
 
 
@@ -269,8 +285,192 @@ padding: 16px;
 margin-bottom: 10px;
 word-break: break-all;
 }
+////////////////////////global////////////////
+a:hover {
+  color: #03aac4;
+}
 
+.press-banner {
+  background-image: linear-gradient(180deg,#03aac4 0%,#338cad 100%)!important;
+  float: left;
+  width: 100%;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+}
+.inner-container {
+  position: relative;
+  z-index: 3;
+  width: 80%;
+  max-width: 1080px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.inner-container h1{
+  margin: 0 4%;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 26px;
+  color: #ffffff !important;
+}
+.press-summary{
+  padding: 40px 0;
+  background-color: #f7f9f9!important;
+  float: left;
+  width: 100%;
+}
+.inner-summary{
+  position: relative;
+  width: 90%;
+  max-width: 1920px;
+  margin: auto;
+}
+.inner-summary h3{
+  font-size: 32px;
+  font-weight: 400;
+  margin: 30px 0;
+}
+.light-text {
+font-size: 16px;
+color: rgba(59,59,60,0.8);
+}
+.press-coverage {
+  margin-bottom: 25px;
+  background-color: #fff !important;
+}
+.press-coverage h3 {
+  font-size: 26px !important;
+  font-weight: 400;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e6e9ea!important;
+  padding: 15px 0;
+}
+.inner-summary .btn-early-access:before {
+  margin-right: 10px;
+}
+.inner-summary a:hover{
+  text-decoration: none;
+}
+.press-coverage-list ul li {
+padding-bottom: 15px;
+font-size: 16px;
+color: rgba(59,59,60,0.8);
+display: block;
+}
+// ================================================
+
+// ===========================airdrop partial========================
+.nice-fill p {
+  display: block;
+  float: left;
+  width: 100%;
+}
+.nice-fill .mdText {
+font-size: 20px;
+line-height: 1.5;
+opacity: 0.7;
+margin-bottom: 10px;
+text-align: center;
+}
+.nice-fill .smText {
+  text-align: center;
+  margin: 30px 0 15px 0;
+}
+.nice-fill .mc_optin_share {
+  display: block;
+  text-align: center;
+}
+.nice-fill .mc_optin_share li {
+  display: inline-block;
+}
+.nice-fill .mc_optin_share li a i {
+  font-size: 25px;
+  margin: 10px;
+}
+.nice-fill .btn-green {
+border: solid 2px;
+border-color: #97C355;
+border-radius: 20px;
+font-weight: 600;
+height: 45px;
+padding: 0.3em 0.6em;
+color: #ffffff;
+background-color: #97C355;
+}
+.nice-fill .btn-green i {
+  font-weight: 300;
+  margin-right: 10px;
+}
+.nice-fill .btn-green:hover {
+  color: #fff;
+  background-color: #97C355;
+  text-decoration: none; 
+}
+.nice-fill .share_link_title {
+font-weight: 600;
+}
+
+
+
+// ===================================================================
   // ================================
+
+  // ==============faq======================================
+
+  .faqs-main{
+    padding-bottom: 70px;
+  }
+  .faqs-main h2.similar-heading{
+    margin-top: 30px;
+    color: #03aac4;
+  }
+  .card-faqs{
+    border-bottom: 1px solid #aaa;
+  }
+  .card-faqs h5 .btn{
+    color: #3b3b3c;
+    font-size: 19px;
+    font-weight: 600;
+    white-space: normal;
+  }
+  .card-faqs h5 .btn:hover,
+  .card-faqs h5 .btn:focus{
+    text-decoration: none;
+  }
+  .card-faqs .card-body{
+    padding-left: 40px;
+    padding-bottom: 10px;
+  }
+  .card-faqs .card-body p{
+    color: #3b3b3c;
+  }
+  .card-faqs .card-body p a:hover,
+  .card-faqs .card-body p a:focus,
+  .card-faqs .card-collapse-icons a:hover,
+  .card-faqs .card-collapse-icons a:focus{
+    color: #03aac4;
+    text-decoration: none;
+  }
+  .card-faqs .card-collapse-icons a{
+    min-width: 24px;
+    font-size: 22px;
+  }
+  .card-faqs h5.collapsed .card-collapse-minus,
+  .card-faqs h5 .card-collapse-plus{
+    display: none;
+  }
+  .card-faqs h5 .card-collapse-minus,
+  .card-faqs h5.collapsed .card-collapse-plus{
+    display: block;
+  }
+  .decimal-list li{
+    line-height: 24px;
+  }
+  .faqs-main .faqs-main-block{
+    padding-bottom: 20px;
+  }
+  
+  // ==========================================================
   /*
   ======================================================
   combine css
@@ -279,8 +479,7 @@ word-break: break-all;
  @media(min-width: 992px){
 	.revenue-sharing{
 		height: 90vh;
-		background-position: bottom center;
-		background-image: url('../images/header-illustration.png');
+    background-position: bottom center;
 		background-size: cover;
 	}
 	.similar-heading{
@@ -291,7 +490,6 @@ word-break: break-all;
 	}
 	.benefits-block .row .col:first-child:after{
 		content: '';
-		background: url(../images/vertical-dotted-line.png) no-repeat;
 		width: 2px;
 		height: 100%;
 		display: inline-block;
@@ -305,6 +503,17 @@ word-break: break-all;
 	}
 }
 @media(max-width: 991px){
+  .card-faqs h5 .btn{
+		font-size: 15px;
+	}
+	.faqs-contact .similar-heading{
+		font-size: 22px;
+	}
+	.faqs-visit .container-wide,
+	.faqs-main .container-wide,
+	.faqs-contact .container-wide{
+		width: 94%;
+	}
 	.six-columns{
 		padding: 10px 50px;
 	}
@@ -364,8 +573,12 @@ word-break: break-all;
 	.container-we-stack{
 		width: 94%;
 		padding-right: 15px;
-		padding-left: 15px;
-	}
+    padding-left: 15px;
+    
+  }
+  .revenue-sharing-content {
+    margin-top: 10%;
+ }
 }
 @media(max-width: 768px){
 	.six-columns{

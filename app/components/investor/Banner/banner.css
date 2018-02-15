@@ -1,0 +1,26 @@
+.investor-sections{
+  background-image: url('./investors.jpg') !important;
+  background-position: top !important;
+  position: relative;
+ }
+ .investor-sections:after {
+     content: "";
+     background-color: rgba(59,59,60,0.7);    
+     position: absolute;
+     z-index: 1;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     content: "";
+     pointer-events: none;
+     display: block;
+ }
+ .investor-sections .revenue-sharing-content {
+     position: relative;
+     z-index: 55;
+ }
+ .investor-sections .revenue-sharing-content h1, 
+ .investor-sections .revenue-sharing-content p {
+     color: #fff !important;
+ }

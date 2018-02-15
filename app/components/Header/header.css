@@ -12,7 +12,8 @@
 .header .navbar li a {
 	font-size: 14px;
 	font-weight: 600;
-	color: rgba(59,59,60,0.9);
+	color: rgba(59,59,60,0.9) !important;
+	cursor: pointer;
 }
 .header .navbar li {
 	padding-right: 14px;

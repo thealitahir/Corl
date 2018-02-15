@@ -15,7 +15,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav ml-auto">
-                <li className="nav-item active">
+                <li className="nav-item">
                   <a className="nav-link" onClick={() => this.props.history.push('/whitepaper')}>Whitepaper</a>
                 </li>
                 <li className="nav-item">

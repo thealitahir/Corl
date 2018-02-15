@@ -1,0 +1,10 @@
+.about-sections{
+  background-image: url("./about-us.jpg")!important;
+  background-position: top !important;
+  position: relative;
+ }
+ .about-sections:after {
+     content: "";
+     background-color: rgba(59,59,60,0) !important;    
+    
+ }

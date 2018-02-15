@@ -1,0 +1,9 @@
+.faqs-contact .similar-heading{
+	font-size: 27px;
+}
+.faqs-contact .similar-heading a:hover,
+.faqs-contact .similar-heading a:focus{
+	color: #03aac4;
+	text-decoration: none;
+}
+

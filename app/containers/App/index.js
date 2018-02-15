@@ -27,6 +27,8 @@ import Privacy from '../Privacy/Privacy';
 import Investor from '../Investor/Investor';
 import About from '../About/About';
 import Contact from '../Contact/Contact';
+import Press from '../Press/Press';
+import Faq from '../Faq/Faq';
 
 export default function App() {
   return (
@@ -42,6 +44,8 @@ export default function App() {
         <Route path='/investor' component={Investor} />
         <Route path='/about' component={About} />
         <Route path='/contact' component={Contact} />
+        <Route path='/press' component={Press} />
+        <Route path='/faq' component={Faq} />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer />
