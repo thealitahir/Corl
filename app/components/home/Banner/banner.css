@@ -92,5 +92,6 @@
       background-position: bottom center;
       background-image: url('./header-illustration.png');
       background-size: cover;
+      padding: 0 15px;
     }
   }
