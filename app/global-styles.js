@@ -471,6 +471,121 @@ font-weight: 600;
   }
   
   // ==========================================================
+
+
+  // ======Investment modal======
+  .investment-modal {
+    display: block !important;
+    opacity: 1 !important;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .modal.fade .modal-dialog {
+    transform: translate(0);
+  }
+  .centered-modal {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+  }
+  .investment-modal .modal-dialog{
+      width: 60%;
+      max-width: inherit !important;
+  }
+  .investment-modal .modal-content {
+      border-radius: 6px;
+      border: 8px none #000000;
+      box-shadow: 0px 0px 30px 0px rgba( 2, 2, 2, 1.00 );
+      background-color: rgba( 255, 255, 255, 1.00 );
+  }
+  .investment-modal .modal-dialog .modal-body {
+      padding: 40px;
+  }
+  .investment-modal .pum-close {
+      position: absolute;
+   height: 35px;
+   width: 35px;
+   left: auto;
+   right: -15px;
+   bottom: auto;
+   top: -15px;
+   padding: 0px;
+   color: #000000;
+   font-family: inherit;
+   font-size: 26px;
+   line-height: 30px;
+   border: 2px solid #ffffff;
+   border-radius: 30px;
+   box-shadow: 0px 0px 15px 1px rgba( 2, 2, 2, 0.75 );
+   text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 );
+   background-color: rgba( 255, 255, 255, 1.00 );
+   position: absolute;
+   opacity: 1;
+   cursor: pointer;
+   font-weight: 400;
+  }
+  .investment-modal h2 {
+   font-size: 30px;
+   margin-bottom: 20px;
+   margin-top: 15px;
+   font-weight: 600;
+   -webkit-font-smoothing: antialiased;
+   text-align: center;
+  }
+  .investment-modal p {
+   font-size: 20px;
+   line-height: 1.5;
+   opacity: 0.7;
+   margin-bottom: 10px;
+   text-align: center;
+  }
+  .investing-field{
+      width: 60%;
+      float: none;
+      margin: 20px auto;
+  }
+  .mc_form_input {
+      font-size: 16px !important;
+      color: #3b3b3c !important;
+      opacity: 1 !important;
+      text-align: left !important;
+      width: 60%;
+      float: none;
+      margin: auto;
+  }
+  .mc_form_input label {
+      color: #3b3b3c;
+      padding-right: 10px;
+  }
+  .mc_form_input span {
+      padding-right: 10px;
+      opacity: 1 !important
+  }
+  .mc_form_submit_subscription input{
+      color: #ffffff;
+      background-color: #97C355;
+      font-weight: 600;
+      padding: 0.3em 1em;
+      transition: all 0.5s;
+      font-size: 18px;
+      text-align: center;
+      border: 2px solid;
+      border-radius: 20px;
+      height: 45px;
+      line-height: 1.7;
+      cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+
+  // =====================================
+
   /*
   ======================================================
   combine css

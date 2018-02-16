@@ -175,7 +175,7 @@ class Stackup extends React.Component { // eslint-disable-line react/prefer-stat
                         </div>
                     </div>
                     <div className="container-inner-padd">
-                        <a href="#" className="btn btn-early-access d-inline-block mb-3">Get Early Access</a>
+                        <a onClick={() => { this.props.showModel(true) }} className="btn btn-early-access d-inline-block mb-3">Get Early Access</a>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@ class Banner extends React.Component { // eslint-disable-line react/prefer-state
                             <div className="revenue-sharing-content">
                                 <h1>Meet Corl</h1>
                                 <p>We are combining two of the most recent disruptions in the online world: crowdfunding and blockchain. As a result, we are inventing a whole new way to make financing and investing in companies more intuitive.</p>
-                                <a href="#" className="btn btn-early-access d-inline-block">Request Early Access</a>
+                                <a onClick={() => this.props.setModelFlag(true)} className="btn btn-early-access d-inline-block">Request Early Access</a>
                             </div>
                         </div>
                     </div>

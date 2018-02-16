@@ -16,17 +16,48 @@ import Banner from '../../components/home/Banner/Banner';
 import Benifits from '../../components/home/Benifits/Benifits';
 import Revenue from '../../components/home/Revenue/Revenue';
 import Works from '../../components/home/Works/Works';
+import Model from './Model';
+
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+
+  state = { showModel: false }
+  renderModel() {
+    return (
+      <Model
+        closeModel={(value) => {
+          this.setState({ showModel: value })
+        }}
+      />
+    )
+  }
+
   render() {
     return (
-      <div className="main-content home-content">
-        <Banner />
-        <Corl />
-        <Works />
-        <Benifits />
-        <Revenue />
-        <Corl />
+      <div>
+        <div className="main-content home-content">
+          <Banner
+            setModelFlag={(value) => {
+              this.setState({ showModel: value })
+            }}
+          />
+          <Corl />
+          <Works />
+          <Benifits
+            setModelFlag={(value) => {
+              this.setState({ showModel: value })
+            }}
+          />
+          <Revenue />
+          <Corl
+            setModelFlag={(value) => {
+              this.setState({ showModel: value })
+            }}
+          />
+        </div>
+        {this.state.showModel ? this.renderModel() : null}
       </div>
+
+
 
     );
   }

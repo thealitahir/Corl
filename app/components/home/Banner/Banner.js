@@ -7,7 +7,7 @@ import mtlintech from '../../../images/mtlintech.png';
 import techvibe from '../../../images/techvibes.png';
 import bank from '../../../images/banknxt.png';
 class Banner extends React.Component { // eslint-disable-line react/prefer-stateless-function
-  render() {
+  renderPage() {
     return (
       <div>
         <div className="revenue-sharing py-sections">
@@ -17,7 +17,7 @@ class Banner extends React.Component { // eslint-disable-line react/prefer-state
                 <div className="revenue-sharing-content">
                   <h1>Revenue sharing on the blockchain</h1>
                   <p>The world's first revenue-sharing token designed to support and participate in the growth of emerging companies.</p>
-                  <a href="#" className="btn btn-early-access d-inline-block">Get Early Access</a>
+                  <a onClick={() => this.props.setModelFlag(true)} className="btn btn-early-access d-inline-block">Get Early Access</a>
                 </div>
               </div>
             </div>
@@ -50,6 +50,14 @@ class Banner extends React.Component { // eslint-disable-line react/prefer-state
       </div>
 
     );
+  }
+
+  render() {
+    return (
+      <div>
+        {this.renderPage()}
+      </div>
+    )
   }
 }
 

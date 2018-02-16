@@ -4,16 +4,38 @@ import Work from '../../components/investor/Work/Work';
 import Register from '../../components/investor/Register/Register';
 import Corl from '../../components/investor/Corl/Corl';
 import Detail from '../../components/investor/Detail/Detail';
+import ModelInvestor from '../HomePage/ModelInvestor';
 
 class Investor extends React.Component {
+  state = { investorModel: false }
+
+  showInvestorModal() {
+    return (
+      <ModelInvestor
+        closeInvestorModel={(value) => {
+          this.setState({ investorModel: value })
+        }}
+      />
+    )
+  }
+
   render() {
     return (
       <div className="main-content">
-        <Banner />
+        <Banner
+          openInvestorModel={(value) => {
+            this.setState({ investorModel: true })
+          }}
+        />
         <Detail />
         <Corl />
         <Work />
-        <Register />
+        <Register
+          openInvestorModel={(value) => {
+            this.setState({ investorModel: true })
+          }}
+        />
+        {this.state.investorModel ? this.showInvestorModal() : null}
       </div>
     )
   }

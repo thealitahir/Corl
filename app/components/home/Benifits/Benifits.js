@@ -53,7 +53,7 @@ class Benifits extends React.Component { // eslint-disable-line react/prefer-sta
             </div>
           </div>
           <div className="container-inner-padd choose-corl-inner">
-            <a href="#" className="btn btn-early-access d-inline-block">Get Early Access</a>
+            <a onClick={() => this.props.setModelFlag(true)} className="btn btn-early-access d-inline-block">Get Early Access</a>
           </div>
         </div>
       </div>
