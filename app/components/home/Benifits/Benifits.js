@@ -1,4 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 import "./benifits.css"
 import company from '../../../images/company.svg';
 import invester from '../../../images/investors.svg';
@@ -28,7 +30,7 @@ class Benifits extends React.Component { // eslint-disable-line react/prefer-sta
                         <li>Remain in full control of your company.</li>
                         <li>Flexible repayment approach—pay as you grow.</li>
                       </ul>
-                      <a href="https://corl.io/companies/">Learn more about revenue sharing</a>
+                      <a onClick={() => this.props.history.push('/companies')}>Learn more about revenue sharing</a>
                     </div>
                   </div>
                 </div>
@@ -45,7 +47,7 @@ class Benifits extends React.Component { // eslint-disable-line react/prefer-sta
                         <li>Diversify your portfolio beyond stocks and bonds through crypto assets.</li>
                         <li>Help support emerging companies.</li>
                       </ul>
-                      <a href="https://corl.io/investors/">Learn more about investing</a>
+                      <a onClick={() => this.props.history.push('/investor')}>Learn more about investing</a>
                     </div>
                   </div>
                 </div>
@@ -61,4 +63,4 @@ class Benifits extends React.Component { // eslint-disable-line react/prefer-sta
   }
 }
 
-export default Benifits;
+export default withRouter(connect(null, null)(Benifits));
