@@ -530,13 +530,13 @@ font-weight: 600;
 		margin-bottom: 30px;
 	}
 	.how-works .how-works-img img{
-		max-width: 100%;
+		max-width: 100% !important;
 	}
 	.container-inner-padd{
 		margin-bottom: 30px;
 	}
 	.benefits-block-container{
-		width: 100%;
+		width: 100% !important;
 	}
 	.benefits-block .row .col:first-child .benefits-detail-container:after{
     content: '';
