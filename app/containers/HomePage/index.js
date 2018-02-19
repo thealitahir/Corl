@@ -40,7 +40,11 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
               this.setState({ showModel: value })
             }}
           />
-          <Corl />
+          <Corl
+            setModelFlag={(value) => {
+              this.setState({ showModel: value })
+            }}
+          />
           <Works />
           <Benifits
             setModelFlag={(value) => {
@@ -48,11 +52,6 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
             }}
           />
           <Revenue />
-          <Corl
-            setModelFlag={(value) => {
-              this.setState({ showModel: value })
-            }}
-          />
         </div>
         {this.state.showModel ? this.renderModel() : null}
       </div>

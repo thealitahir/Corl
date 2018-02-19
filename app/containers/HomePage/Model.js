@@ -1,8 +1,13 @@
 import React from 'react';
+import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
 
 class Model extends React.Component {
-  state = { entrepreneur: false, investor: false, form: true }
+  state = { entrepreneur: false, investor: false, form: true, country: '' }
+  selectCountry(val) {
+    this.setState({ country: val });
+  }
   renderForm() {
+    const { country } = this.state;
     return (
       <div className="modal-body">
         <h2>We're Making Investing in Companies More Intuitive.</h2>
@@ -34,9 +39,12 @@ class Model extends React.Component {
             {
               this.state.investor ?
                 <div>
-                  <div className="investing-field">
-                    <input className="input-field" type="text" placeholder="Your Country of Residence" required="" />
+                  <div className="form-field">
+                    <CountryDropdown className="select-field"
+                      value={country}
+                      onChange={(val) => this.selectCountry(val)} />
                   </div>
+
                   <div className="form-field">
                     <label>Please indicate the amount with which you want to participate in the token sale (in USD).</label>
                     <select name="INVEST_AMT" required="" className="select-field">

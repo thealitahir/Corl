@@ -1,8 +1,13 @@
 import React from 'react';
+import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
 
 class ModelInvestor extends React.Component {
-  state = { entrepreneur: false, investor: false, form: true }
+  state = { entrepreneur: false, investor: false, form: true, country: '' }
+  selectCountry(val) {
+    this.setState({ country: val });
+  }
   renderForm() {
+    const { country } = this.state;
     return (
       <div className="modal-body">
         <h2>Get Whitelisted for the Corl Token Sale</h2>
@@ -19,8 +24,10 @@ class ModelInvestor extends React.Component {
               <input className="input-field" type="email" placeholder="Your Email Address" required="" />
             </div>
             <div>
-              <div className="investing-field">
-                <input className="input-field" type="text" placeholder="Your Country of Residence" required="" />
+              <div className="form-field">
+                <CountryDropdown className="select-field"
+                  value={country}
+                  onChange={(val) => this.selectCountry(val)} />
               </div>
               <div className="form-field">
                 <label>Please indicate the amount with which you want to participate in the token sale (in USD).</label>
