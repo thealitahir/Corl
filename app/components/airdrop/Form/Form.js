@@ -1,10 +1,16 @@
 import React from 'react';
 import "./form.css";
+import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
+
 class Form extends React.Component { // eslint-disable-line react/prefer-stateless-function
-    state = { flag: false }
+    state = { flag: false, country: '' }
+    selectCountry(val) {
+        this.setState({ country: val });
+      }
     renderForm() {
+        const { country } = this.state;
         return (
-            <div className="airdrop-container">
+            <div className="airdrop-container airdrop-container-form pb-5">
                 <div className="row justify-content-center" id="fill-form-id">
                     <div className="col col-12 col-lg-7 fill-form">
                         <h2>Fill the Form</h2>
@@ -41,7 +47,9 @@ class Form extends React.Component { // eslint-disable-line react/prefer-statele
                                 <input type="text" className="input-field" name="ETH_ADDR" placeholder="Your ETH Address" required="" />
                             </div>
                             <div className="form-field">
-                                <input type="text" className="input-field" name="COUNTRY" placeholder="Your Country of Residence" required="" />
+                                <CountryDropdown className="select-field"
+                                value={country}
+                                onChange={(val) => this.selectCountry(val)} />
                             </div>
                             <div className="form-field mc_form_submit_subscription">
                                 <input type="submit" value="Join Airdrop" onClick={() => { this.setState({ flag: true }) }} className="submit-btn" />
@@ -54,7 +62,7 @@ class Form extends React.Component { // eslint-disable-line react/prefer-statele
     }
     renderMessage() {
         return (
-            <div className="airdrop-container">
+            <div className="airdrop-container airdrop-container-form pb-5">
                 <div className="row justify-content-center" id="fill-form-id">
                     <div className="col col-12 col-lg-7 fill-form nice-fill">
                         <h2>Nice! You're in!</h2>

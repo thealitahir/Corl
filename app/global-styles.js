@@ -44,6 +44,9 @@ injectGlobal`
     float: left;
     width: 100%;
   }
+  .navbar-brand {
+    cursor: pointer;
+  }
   img{
     max-width: 100%;
   }
@@ -85,7 +88,7 @@ injectGlobal`
   .btn-early-access{
     display: inline-block;
     margin-top: 20px;
-    color: #fff;
+    color: #fff !important;
     padding: .3em 1em;
     font-size: 18px;
     background-color: #03aac4;
@@ -159,7 +162,7 @@ injectGlobal`
     width: 94%;
   }
   .revenue-sharing-content {
-    margin-top: 25%;
+    margin-top: 30%;
   }
   .revenue-sharing-content h1{
     font-weight: 600;
@@ -477,7 +480,7 @@ font-weight: 600;
   .investment-modal {
     display: block !important;
     opacity: 1 !important;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5);
   }
   .modal.fade .modal-dialog {
     transform: translate(0);
@@ -523,6 +526,7 @@ font-weight: 600;
    opacity: 1;
    cursor: pointer;
    font-weight: 400;
+   z-index: 5;
   }
   .investment-modal h2 {
    font-size: 30px;
@@ -543,6 +547,9 @@ font-weight: 600;
       width: 60%;
       float: none;
       margin: 20px auto;
+  }
+  .investing-form .form-field {
+    padding: 0 !important;
   }
   .mc_form_input {
       font-size: 16px !important;

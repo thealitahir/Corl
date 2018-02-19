@@ -37,13 +37,11 @@ class Banner extends React.Component { // eslint-disable-line react/prefer-state
             <div className="media-et-module text-center mtlintech-module">
               <span><img src={mtlintech} alt="IMG" /></span>
             </div>
-            <div className="media-et-module-combine">
-              <div className="media-et-module text-center techvibes-module">
-                <span><img src={techvibe} alt="IMG" /></span>
-              </div>
-              <div className="media-et-module text-center banknxt-module">
-                <span><img src={bank} alt="IMG" /></span>
-              </div>
+            <div className="media-et-module text-center techvibes-module">
+              <span><img src={techvibe} alt="IMG" /></span>
+            </div>
+            <div className="media-et-module text-center banknxt-module">
+              <span><img src={bank} alt="IMG" /></span>
             </div>
           </div>
         </div>

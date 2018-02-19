@@ -6,7 +6,7 @@ class Contact extends React.Component {
         <div className="terms-container contact-us">
           <div className="contact-heading">
             <h1 className="text-center"><span>Contact Us</span></h1>
-            <h5 className="text-center mt-3">Feel free to send us your question using the form below and we’ll do our very best to answer you as soon as we can.</h5>
+            <h5 className="text-center mt-3 mb-4">Feel free to send us your question using the form below and we’ll do our very best to answer you as soon as we can.</h5>
           </div>
           <div className="row">
             <div className="col-lg-8">

@@ -4,8 +4,8 @@ import Contact from '../../components/faq/Contact/Contact';
 import Entrepreneur from '../../components/faq/Entrepreneur/Entrepreneur';
 import General from '../../components/faq/General/General';
 import Invester from '../../components/faq/Invester/Invester';
-import $ from 'jquery';
-window.jQuery = $;
+// import $ from 'jquery';
+// window.jQuery = $;
 import bootstrap from 'bootstrap';
 class Faq extends React.Component {
   render() {

@@ -5,6 +5,9 @@
 	box-shadow: 0 0 35px rgba(0,0,0,0.1);
 	border: 1px solid #ebebeb;
 }
+.airdrop-container-share{
+  margin-top: 100px;
+}
 .et_pb_row {
   position: relative;
   width: 90%;

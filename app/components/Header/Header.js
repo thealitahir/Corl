@@ -34,7 +34,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                   <a className="nav-link" onClick={() => this.props.history.push('/about')}>About</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Blog</a>
+                  <a className="nav-link" href="https://blog.corl.io/">Blog</a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="https://t.me/corltoken"><i className="fa fa-telegram"></i> Join us on Telegram</a>

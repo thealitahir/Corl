@@ -13,6 +13,7 @@
       padding: 0 20px;
       padding-bottom: 1em;
   }
+  .form-field select,
   .select-field,
   .input-field{
       display: block;
@@ -43,6 +44,7 @@
     height: 45px;
     line-height: 1.7;
   }
+  .form-field select:focus,
   .select-field:focus,
   .input-field:focus{
     border-color: #97C355;
@@ -53,5 +55,9 @@
   .mc_form_submit_subscription {
       text-align: center;
   }
+  .airdrop-container-form{
+      margin-bottom: 50px;
+  }
+
   
   

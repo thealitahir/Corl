@@ -18,7 +18,7 @@ class Share extends React.Component { // eslint-disable-line react/prefer-statel
     // }
     render() {
         return (
-            <div className="airdrop-container" id="airdrop-tasks">
+            <div className="airdrop-container airdrop-container-share" id="airdrop-tasks">
 
                 <div className="row">
                     <div className="col col-12 col-lg-4">
