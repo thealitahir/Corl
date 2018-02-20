@@ -477,56 +477,74 @@ font-weight: 600;
 
 
   // ======Investment modal======
+  .investment-modal .fade-inner{
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  .investment-modal .airdrop-container {
+    margin: 0;
+    padding: 0;
+    border:0;
+    box-shadow: none;
+  }
   .investment-modal {
     display: block !important;
     opacity: 1 !important;
-    background: rgba(0, 0, 0, 0.5);
   }
   .modal.fade .modal-dialog {
     transform: translate(0);
   }
   .centered-modal {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
   }
   .investment-modal .modal-dialog{
-      width: 60%;
-      max-width: inherit !important;
+    width: 60%;
+    max-width: inherit !important;
   }
   .investment-modal .modal-content {
-      border-radius: 6px;
-      border: 8px none #000000;
-      box-shadow: 0px 0px 30px 0px rgba( 2, 2, 2, 1.00 );
-      background-color: rgba( 255, 255, 255, 1.00 );
+    border-radius: 6px;
+    border: 8px none #000000;
+    box-shadow: 0px 0px 30px 0px rgba( 2, 2, 2, 1.00 );
+    background-color: rgba( 255, 255, 255, 1.00 );
   }
   .investment-modal .modal-dialog .modal-body {
-      padding: 40px;
+    padding: 40px;
+    overflow-y: auto;
+    max-height: 600px;
+  }
+  .investment-modal .modal-dialog .modal-body::-webkit-scrollbar { 
+    display: none; 
   }
   .investment-modal .pum-close {
-      position: absolute;
-   height: 35px;
-   width: 35px;
-   left: auto;
-   right: -15px;
-   bottom: auto;
-   top: -15px;
-   padding: 0px;
-   color: #000000;
-   font-family: inherit;
-   font-size: 26px;
-   line-height: 30px;
-   border: 2px solid #ffffff;
-   border-radius: 30px;
-   box-shadow: 0px 0px 15px 1px rgba( 2, 2, 2, 0.75 );
-   text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 );
-   background-color: rgba( 255, 255, 255, 1.00 );
-   position: absolute;
-   opacity: 1;
-   cursor: pointer;
-   font-weight: 400;
-   z-index: 5;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    left: auto;
+    right: -15px;
+    bottom: auto;
+    top: -15px;
+    padding: 0px;
+    color: #000000;
+    font-family: inherit;
+    font-size: 26px;
+    line-height: 30px;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    box-shadow: 0px 0px 15px 1px rgba( 2, 2, 2, 0.75 );
+    text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 );
+    background-color: rgba( 255, 255, 255, 1.00 );
+    position: absolute;
+    opacity: 1;
+    cursor: pointer;
+    font-weight: 400;
+    z-index: 5;
   }
   .investment-modal h2 {
    font-size: 30px;
@@ -537,16 +555,16 @@ font-weight: 600;
    text-align: center;
   }
   .investment-modal p {
-   font-size: 20px;
-   line-height: 1.5;
-   opacity: 0.7;
-   margin-bottom: 10px;
-   text-align: center;
+    font-size: 20px;
+    line-height: 1.5;
+    opacity: 0.7;
+    margin-bottom: 10px;
+    text-align: center;
   }
   .investing-field{
-      width: 60%;
-      float: none;
-      margin: 20px auto;
+    width: 60%;
+    float: none;
+    margin: 20px auto;
   }
   .investing-form .form-field {
     padding: 0 !important;
@@ -650,7 +668,7 @@ font-weight: 600;
 	}
 	.choose-corl .choose-corl-block{
 		margin-bottom: 30px;
-	}
+  }
 	.how-works .how-works-img img{
 		max-width: 100% !important;
 	}
