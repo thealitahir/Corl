@@ -31,8 +31,17 @@ import Press from '../Press/Press';
 import Faq from '../Faq/Faq';
 import Error404 from '../Error/Error404';
 import Error500 from '../Error/Error500';
-
+import $ from 'jquery';
 export default function App() {
+  $('.description-bar').removeClass("getFix");
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+      $('.header').addClass("shadowTop");
+    } else if ($(this).scrollTop() < 50) {
+      $('.header').removeClass("shadowTop");
+
+    }
+  });
   return (
     <div className="off-canvas-container">
       <Header />
@@ -50,7 +59,7 @@ export default function App() {
         <Route path='/faq' component={Faq} />
         <Route path='/404' component={Error404} />
         <Route path='/500' component={Error500} />
-        <Route  component={Error404} />
+        <Route component={Error404} />
       </Switch>
       <Footer />
     </div>

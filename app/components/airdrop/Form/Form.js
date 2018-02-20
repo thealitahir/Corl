@@ -1,12 +1,26 @@
 import React from 'react';
 import "./form.css";
 import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
+// var ethereum_address = require('ethereum-address');
 
 class Form extends React.Component { // eslint-disable-line react/prefer-stateless-function
-    state = { flag: false, country: '' }
+    state = { flag: false, country: '', ethValue: "" }
     selectCountry(val) {
         this.setState({ country: val });
-      }
+    }
+    updateValue(evt) {
+        this.setState({
+            ethValue: evt.target.value
+        });
+        console.log(this.state.ethValue);
+
+        // if (ethereum_address.isAddress(this.state.ethValue)) {
+        //     console.log('Valid ethereum address.');
+        // }
+        // else {
+        //     console.log('Invalid Ethereum address.');
+        // }
+    }
     renderForm() {
         const { country } = this.state;
         return (
@@ -43,13 +57,18 @@ class Form extends React.Component { // eslint-disable-line react/prefer-statele
                                     <option value="USD > 100,000">USD &gt; 100,000</option>
                                 </select>
                             </div>
+
+
+
                             <div className="form-field">
-                                <input type="text" className="input-field" name="ETH_ADDR" placeholder="Your ETH Address" required="" />
+                                <input type="text" className="input-field" name="ETH_ADDR" placeholder="Your ETH Address" required="" value={this.state.ethValue} onChange={this.updateValue.bind(this)} />
                             </div>
+
+
                             <div className="form-field">
                                 <CountryDropdown className="select-field"
-                                value={country}
-                                onChange={(val) => this.selectCountry(val)} />
+                                    value={country}
+                                    onChange={(val) => this.selectCountry(val)} />
                             </div>
                             <div className="form-field mc_form_submit_subscription">
                                 <input type="submit" value="Join Airdrop" onClick={() => { this.setState({ flag: true }) }} className="submit-btn" />

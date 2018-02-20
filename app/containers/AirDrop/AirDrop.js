@@ -20,6 +20,14 @@ class AirDrop extends React.Component {
 				}
 			});
 		});
+		// $(window).scroll(function () {
+		// 	if ($(this).scrollTop() > 200) {
+		// 		$('.description-bar').addClass("getFix");
+		// 	} else if ($(this).scrollTop() < 200) {
+		// 		$('.description-bar').addClass("getFix");
+		// 	}
+		// });
+		$('.description-bar').addClass("getFix");
 	}
 
 	render() {

@@ -650,6 +650,19 @@ error
 	text-decoration: none;
 	background-color: #71ab1d;
 }
+.getFix .collapse.navbar-collapse {
+  display:none !important;
+}
+.getFix .header {
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.1);
+	-moz-box-shadow: 0 1px 0 rgba(0,0,0,.1);
+	box-shadow: 0 1px 0 rgba(0,0,0,.1);
+}
+.shadowTop {
+  -webkit-box-shadow: 0 0 7px rgba(0,0,0,.1)!important;
+  -moz-box-shadow: 0 0 7px rgba(0,0,0,.1)!important;
+  box-shadow: 0 0 7px rgba(0,0,0,.1)!important;
+}
 
 
 
