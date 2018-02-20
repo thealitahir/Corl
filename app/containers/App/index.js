@@ -29,6 +29,8 @@ import About from '../About/About';
 import Contact from '../Contact/Contact';
 import Press from '../Press/Press';
 import Faq from '../Faq/Faq';
+import Error404 from '../Error/Error404';
+import Error500 from '../Error/Error500';
 
 export default function App() {
   return (
@@ -46,7 +48,9 @@ export default function App() {
         <Route path='/contact' component={Contact} />
         <Route path='/press' component={Press} />
         <Route path='/faq' component={Faq} />
-        <Route component={NotFoundPage} />
+        <Route path='/404' component={Error404} />
+        <Route path='/500' component={Error500} />
+        <Route  component={Error404} />
       </Switch>
       <Footer />
     </div>

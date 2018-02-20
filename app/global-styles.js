@@ -611,6 +611,56 @@ font-weight: 600;
 
   // =====================================
 
+  
+/*
+======================================================
+error
+======================================================
+*/
+
+.error-content .container{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.error-content h1{
+	font-size: 40px;
+	font-weight: 600;
+}
+.error-content p{
+	font-size: 1.4rem;
+	line-height: 1.4em;
+	color: #3b3b3c;
+}
+.error-img{
+	max-width: 482px;
+}
+.go-home-btn{
+	background-color: #97c355;
+	font-weight: 600;
+	padding: .3em 2em;
+	transition: all .5s;
+	font-size: 18px;
+	text-align: center;
+	border: 2px solid;
+	border-radius: 8px;
+	min-height: 45px;
+}
+.go-home-btn:hover,
+.go-home-btn:focus{
+	text-decoration: none;
+	background-color: #71ab1d;
+}
+
+
+
+
+/*
+======================================================
+error
+======================================================
+*/
+
+
   /*
   ======================================================
   combine css
