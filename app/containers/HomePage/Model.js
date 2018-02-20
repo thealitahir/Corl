@@ -13,15 +13,18 @@ class Model extends React.Component {
         <h2>We're Making Investing in Companies More Intuitive.</h2>
         <p>A straightforward investment method based on revenue sharing &amp; the blockchain.</p>
         <div className="investing-form">
-          <form>
+          <form id="mc4wp-form-3" method="post" data-id="26494" data-name="Corl Early Access - General" >
             <div className="investing-field">
-              <input className="input-field" type="text" placeholder="Your First Name" required="" />
+              <input className="input-field" type="text" name="FNAME" placeholder="Your First Name" required="" />
             </div>
             <div className="investing-field">
-              <input className="input-field" type="text" placeholder="Your Last Name" required="" />
+              <input className="input-field" type="text" name="LNAME" placeholder="Your Last Name" required="" />
             </div>
             <div className="investing-field">
-              <input className="input-field" type="email" placeholder="Your Work Email" required="" />
+              <input className="input-field" type="email" name="EMAIL" placeholder="Your Work Email" required="" />
+            </div>
+            <div className="investing-field">
+              <input className="input-field" type="hidden" name="REF_CODE" value="" />
             </div>
             <div className="mc_form_input mc_form_subscribe_type">
               <label>I am an:</label>
@@ -31,7 +34,7 @@ class Model extends React.Component {
             {
               this.state.entrepreneur ?
                 <div className="investing-field">
-                  <input className="input-field" type="text" placeholder="Your Company Name" required="" />
+                  <input className="input-field" name="COMPANY" type="text" placeholder="Your Company Name" required="" />
                 </div>
                 :
                 null
