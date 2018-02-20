@@ -1,4 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 import error from '../../images/error-img.png';
 
 class Error404 extends React.Component {
@@ -12,7 +14,7 @@ class Error404 extends React.Component {
 					<div className="w-100 my-4">
 						<span className="error-img d-inline-block"><img src={error} alt="Error-IMG" /></span>
 					</div>
-					<a href="#" className="go-home-btn text-white d-inline-block">Go Home</a>
+					<a onClick={() => this.props.history.push('/')} className="go-home-btn text-white d-inline-block">Go Home</a>
 				</div>
 			</div>
 		)
@@ -20,5 +22,4 @@ class Error404 extends React.Component {
 }
 
 
-
-export default Error404;
+export default withRouter(connect(null, null)(Error404));

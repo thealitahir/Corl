@@ -50,7 +50,7 @@ export default function App() {
         <Route path='/faq' component={Faq} />
         <Route path='/404' component={Error404} />
         <Route path='/500' component={Error500} />
-        <Route component={Error404} />
+        <Route  component={Error404} />
       </Switch>
       <Footer />
     </div>
