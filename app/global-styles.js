@@ -33,6 +33,7 @@ injectGlobal`
     flex-direction: column;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    justify-content: flex-end;
   }
   .off-canvas-container .main-content {
     -webkit-box-flex: 1;
