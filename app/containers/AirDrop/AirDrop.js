@@ -3,8 +3,14 @@ import Banner from '../../components/airdrop/Banner/Banner';
 import Share from '../../components/airdrop/Share/Share';
 import Form from '../../components/airdrop/Form/Form';
 import $ from 'jquery'
-class AirDrop extends React.Component {
 
+class AirDrop extends React.Component {
+	// constructor() {
+	// 	super();
+
+	// 	React.trackCustom('Viewed Airdrop Page', {})
+
+	// }
 	componentWillMount() {
 		$(function () {
 			$('a[href*="#"]:not([href="#"].animatedowmn)').click(function () {
@@ -33,6 +39,7 @@ class AirDrop extends React.Component {
 	render() {
 		return (
 			<div className="main-content">
+
 				<Banner />
 				<Share />
 				<Form />

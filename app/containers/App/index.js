@@ -31,37 +31,54 @@ import Press from '../Press/Press';
 import Faq from '../Faq/Faq';
 import Error404 from '../Error/Error404';
 import Error500 from '../Error/Error500';
+import Robot from '../Robot/Robot';
 import $ from 'jquery';
-export default function App() {
-  $('.description-bar').removeClass("getFix");
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 50) {
-      $('.header').addClass("shadowTop");
-    } else if ($(this).scrollTop() < 50) {
-      $('.header').removeClass("shadowTop");
+import ReactGA from 'react-ga';
+import GoogleTag from './GoogleTag';
+class App extends React.Component {
+  constructor() {
+    super();
 
-    }
-  });
-  return (
-    <div className="off-canvas-container">
-      <Header />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path='/whitepaper' component={WhitePaper} />
-        <Route path='/companies' component={Companies} />
-        <Route path='/airdrop' component={AirDrop} />
-        <Route path='/term' component={Term} />
-        <Route path='/privacy' component={Privacy} />
-        <Route path='/investor' component={Investor} />
-        <Route path='/about' component={About} />
-        <Route path='/contact' component={Contact} />
-        <Route path='/press' component={Press} />
-        <Route path='/faq' component={Faq} />
-        <Route path='/404' component={Error404} />
-        <Route path='/500' component={Error500} />
-        <Route component={Error404} />
-      </Switch>
-      <Footer />
-    </div>
-  );
+    // Add your tracking ID created from https://analytics.google.com/analytics/web/#home/
+    ReactGA.initialize('UA-86023410-1');
+    // This just needs to be called once since we have no routes in this case.
+    ReactGA.pageview(window.location.pathname);
+  }
+  render() {
+    $('.description-bar').removeClass("getFix");
+    return (
+      <div className="off-canvas-container">
+        <Header />
+        <GoogleTag gtmId='GTM-T8CG9SD' />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path='/whitepaper' component={WhitePaper} />
+          <Route path='/companies' component={Companies} />
+          <Route path='/airdrop' component={AirDrop} />
+          <Route path='/term' component={Term} />
+          <Route path='/privacy' component={Privacy} />
+          <Route path='/investor' component={Investor} />
+          <Route path='/about' component={About} />
+          <Route path='/contact' component={Contact} />
+          <Route path='/press' component={Press} />
+          <Route path='/faq' component={Faq} />
+          <Route path='/404' component={Error404} />
+          <Route path='/500' component={Error500} />
+          <Route path='/robot.txt' component={Robot} />
+          <Route component={Error404} />
+        </Switch>
+        <Footer />
+      </div>
+    );
+  }
 }
+
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 50) {
+    $('.header').addClass("shadowTop");
+  } else if ($(this).scrollTop() < 50) {
+    $('.header').removeClass("shadowTop");
+
+  }
+});
+export default App;
