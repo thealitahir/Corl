@@ -156,8 +156,6 @@ injectGlobal`
   .italic-text{
     background-color: #ffffff; font-size: 16px;
   }
-
-
   .revenue-sharing .container-wide{
     width: 94%;
   }
@@ -466,6 +464,28 @@ font-weight: 600;
   .card-faqs h5.collapsed .card-collapse-plus{
     display: block;
   }
+  .card-faqs h5 .card-collapse-minus i,
+  .card-faqs h5.collapsed .card-collapse-plus i {
+    display: none;
+  }
+  .card-faqs h5.collapsed .card-collapse-plus:after {
+    content: "\\4c";
+		font-family: 'ElegantIcons';
+    font-size: 30px;
+    font-weight: 700;
+		color: #03aac4;
+    display: inline-block;
+    margin-top: 3px;
+  }
+  .card-faqs h5 .card-collapse-minus:after {
+    content: "\\4b";
+		font-family: 'ElegantIcons';
+    font-size: 30px;
+    font-weight: 700;
+		color: #03aac4;
+    display: inline-block;
+    margin-top: 3px;
+  }
   .decimal-list li{
     line-height: 24px;
   }
@@ -547,12 +567,12 @@ font-weight: 600;
     z-index: 5;
   }
   .investment-modal h2 {
-   font-size: 30px;
-   margin-bottom: 20px;
-   margin-top: 15px;
-   font-weight: 600;
-   -webkit-font-smoothing: antialiased;
-   text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
   }
   .investment-modal p {
     font-size: 20px;
@@ -570,35 +590,35 @@ font-weight: 600;
     padding: 0 !important;
   }
   .mc_form_input {
-      font-size: 16px !important;
-      color: #3b3b3c !important;
-      opacity: 1 !important;
-      text-align: left !important;
-      width: 60%;
-      float: none;
-      margin: auto;
+    font-size: 16px !important;
+    color: #3b3b3c !important;
+    opacity: 1 !important;
+    text-align: left !important;
+    width: 60%;
+    float: none;
+    margin: auto;
   }
   .mc_form_input label {
-      color: #3b3b3c;
-      padding-right: 10px;
+    color: #3b3b3c;
+    padding-right: 10px;
   }
   .mc_form_input span {
-      padding-right: 10px;
-      opacity: 1 !important
+    padding-right: 10px;
+    opacity: 1 !important
   }
   .mc_form_submit_subscription input{
-      color: #ffffff;
-      background-color: #97C355;
-      font-weight: 600;
-      padding: 0.3em 1em;
-      transition: all 0.5s;
-      font-size: 18px;
-      text-align: center;
-      border: 2px solid;
-      border-radius: 20px;
-      height: 45px;
-      line-height: 1.7;
-      cursor: pointer;
+    color: #ffffff;
+    background-color: #97C355;
+    font-weight: 600;
+    padding: 0.3em 1em;
+    transition: all 0.5s;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 20px;
+    height: 45px;
+    line-height: 1.7;
+    cursor: pointer;
   }
 
 

@@ -32,3 +32,9 @@
   margin-bottom: 10px;
   padding-bottom: 0;
 }
+@media only screen and (max-width: 480px) {
+  .airdrop-container{
+    padding: 20px 0px;
+    margin: 10px;
+  }
+}
