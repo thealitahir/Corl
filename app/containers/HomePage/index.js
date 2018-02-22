@@ -18,7 +18,7 @@ import Revenue from '../../components/home/Revenue/Revenue';
 import Works from '../../components/home/Works/Works';
 import Model from './Model';
 
-export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
 
   state = { showModel: false }
   renderModel() {
@@ -61,3 +61,5 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
     );
   }
 }
+
+export default HomePage;

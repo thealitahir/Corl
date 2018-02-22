@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../../components/airdrop/Banner/Banner';
 import Share from '../../components/airdrop/Share/Share';
 import Form from '../../components/airdrop/Form/Form';
+import FbPixel from '../App/FbPixel'
 import $ from 'jquery'
 
 class AirDrop extends React.Component {
@@ -12,6 +13,7 @@ class AirDrop extends React.Component {
 
 	// }
 	componentWillMount() {
+		FbPixel.trackCustom('Viewed Airdrop Page', {})
 		$(function () {
 			$('a[href*="#"]:not([href="#"].animatedowmn)').click(function () {
 				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {

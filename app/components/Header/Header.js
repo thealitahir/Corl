@@ -22,7 +22,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                   <a className="nav-link" onClick={() => this.props.history.push('/airdrop')}>Airdrop Program</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="https://bitcointalk.org/index.php?topic=2876865.msg29553585#msg29553585">Bounty Program</a>
+                  <a className="nav-link" href="https://bitcointalk.org/index.php?topic=2876865.msg29553585#msg29553585" target="_blank">Bounty Program</a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" onClick={() => this.props.history.push('/companies')}>For Companies</a>

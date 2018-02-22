@@ -1,13 +1,33 @@
 import React from 'react';
 import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
-
+import Request from 'react-http-request';
 class Model extends React.Component {
-  state = { entrepreneur: false, investor: false, form: true, country: '' }
+  state = { entrepreneur: false, investor: false, form: true, country: '', FNAME: '', LNAME: '', EMAIL: '', REF_CODE: '', INVEST_AMT: '', COMPANY: '', USER_TYPE: '' }
   selectCountry(val) {
     this.setState({ country: val });
   }
+  handleFName(e) {
+    this.setState({ FNAME: e.target.value })
+  }
+  handleLName(e) {
+    this.setState({ LNAME: e.target.value })
+  }
+  handleEmail(e) {
+    this.setState({ EMAIL: e.target.value })
+  }
+  handleType(e) {
+    this.setState({ USER_TYPE: e.target.value })
+  }
+  handleCompany(e) {
+    this.setState({ COMPANY: e.target.value })
+  }
+  handleInvest(e) {
+    this.setState({ INVEST_AMT: e.target.value })
+  }
+
+
   renderForm() {
-    const { country } = this.state;
+    const { country, FNAME, LNAME, EMAIL, REF_CODE, INVEST_AMT, COMPANY, USER_TYPE } = this.state;
     return (
       <div className="modal-body">
         <h2>We're Making Investing in Companies More Intuitive.</h2>
@@ -15,26 +35,26 @@ class Model extends React.Component {
         <div className="investing-form">
           <form id="mc4wp-form-3" method="post" data-id="26494" data-name="Corl Early Access - General" >
             <div className="investing-field">
-              <input className="input-field" type="text" name="FNAME" placeholder="Your First Name" required="" />
+              <input className="input-field" type="text" value={this.state.FNAME} onChange={this.handleFName.bind(this)} name="FNAME" placeholder="Your First Name" required="" />
             </div>
             <div className="investing-field">
-              <input className="input-field" type="text" name="LNAME" placeholder="Your Last Name" required="" />
+              <input className="input-field" type="text" value={this.state.LNAME} onChange={this.handleLName.bind(this)} name="LNAME" placeholder="Your Last Name" required="" />
             </div>
             <div className="investing-field">
-              <input className="input-field" type="email" name="EMAIL" placeholder="Your Work Email" required="" />
+              <input className="input-field" type="email" value={this.state.EMAIL} onChange={this.handleEmail.bind(this)} name="EMAIL" placeholder="Your Work Email" required="" />
             </div>
             <div className="investing-field">
               <input className="input-field" type="hidden" name="REF_CODE" value="" />
             </div>
             <div className="mc_form_input mc_form_subscribe_type">
               <label>I am an:</label>
-              <span className="entrepreneur"><input name="USER_TYPE" type="radio" id="businessType" value="Entrepreneur" onClick={() => { this.setState({ entrepreneur: true, investor: false }) }} required="" /> Entrepreneur</span>
-              <span className="investor"><input name="USER_TYPE" type="radio" id="investorType" value="Investor" onClick={() => { this.setState({ entrepreneur: false, investor: true }) }} required="" /> Investor</span>
+              <span className="entrepreneur"><input name="USER_TYPE" value={this.state.USER_TYPE} onChange={this.handleType.bind(this)} type="radio" id="businessType" value="Entrepreneur" onClick={() => { this.setState({ entrepreneur: true, investor: false }) }} required="" /> Entrepreneur</span>
+              <span className="investor"><input name="USER_TYPE" value={this.state.USER_TYPE} onChange={this.handleType.bind(this)} type="radio" id="investorType" value="Investor" onClick={() => { this.setState({ entrepreneur: false, investor: true }) }} required="" /> Investor</span>
             </div>
             {
               this.state.entrepreneur ?
                 <div className="investing-field">
-                  <input className="input-field" name="COMPANY" type="text" placeholder="Your Company Name" required="" />
+                  <input className="input-field" value={this.state.COMPANY} onChange={this.handleCompany.bind(this)} name="COMPANY" type="text" placeholder="Your Company Name" required="" />
                 </div>
                 :
                 null
@@ -50,7 +70,7 @@ class Model extends React.Component {
 
                   <div className="form-field">
                     <label>Please indicate the amount with which you want to participate in the token sale (in USD).</label>
-                    <select name="INVEST_AMT" required="" className="select-field">
+                    <select value={this.state.INVEST_AMT} onChange={this.handleInvest.bind(this)} name="INVEST_AMT" required="" className="select-field">
                       <option value="">Choose an amount</option>
                       <option value="USD < 100">USD &lt; 100</option>
                       <option value="USD 100 - 1000">USD 100 - 1000</option>
@@ -67,11 +87,54 @@ class Model extends React.Component {
             }
 
             <div className="mc_form_submit_subscription text-center my-3">
-              <input onClick={() => { this.setState({ entrepreneur: false, investor: false, form: false }) }} type="submit" value="Request Early Access" />
+              <input type="submit" value="Request Early Access"
+                onClick={() => {
+                  this.setState({ entrepreneur: false, investor: false });
+                  // fetch('https://us13.api.mailchimp.com/3.0/lists/76a7c94746/members', {
+                  //   method: 'POST',
+                  //   headers: {
+                  //     'Authorization': 'apikey 460949c257c9c616313928b054f967df-us13',
+                  //     'Content-Type': 'application/json'
+                  //   },
+                  //   body: JSON.stringify({
+                  //     "FNAME": FNAME,
+                  //     "LNAME": LNAME,
+                  //     "email_address": EMAIL,
+                  //     "COMPANY": COMPANY,
+                  //     "USER_TYPE": USER_TYPE,
+                  //     "email_type": "html",
+                  //     "status": "subscribed",
+                  //     "COUNTRY": country
+                  //   }
+                  //   )
+                  // }).then(res => {
+                  //   console.log(res)
+                  // })
+                  {
+                    < Request
+                      url='https://us13.api.mailchimp.com/3.0/lists/76a7c94746/members'
+                      method='post'
+                      accept='application/json'
+                      authorization='apikey 460949c257c9c616313928b054f967df-us13'
+                      verbose={true}
+                    >
+                      {
+                        ({ error, result, loading }) => {
+                          if (loading) {
+                            return <div>loading...</div>;
+                          } else {
+                            return <div>{JSON.stringify(result)}</div>;
+                          }
+                        }
+                      }
+                    </Request>
+                  }
+                }}
+              />
             </div>
           </form>
         </div>
-      </div>
+      </div >
     )
   }
   renderMessage() {

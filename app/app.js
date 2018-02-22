@@ -45,8 +45,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 // Import CSS reset and Global Styles
 import './global-styles';
 
-import ReactPixel from 'react-facebook-pixel';
-ReactPixel.init('1557643727875796');
+
 // Create redux store with history
 const initialState = {};
 const history = createHistory();

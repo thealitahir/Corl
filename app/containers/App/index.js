@@ -12,29 +12,15 @@
  */
 
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
 
-import HomePage from 'containers/HomePage/Loadable';
-import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
-import WhitePaper from '../WhitePaper/WhitePaper';
-import Companies from '../Companies/Companies';
-import AirDrop from '../AirDrop/AirDrop';
-import Term from '../Term/Term';
-import Privacy from '../Privacy/Privacy';
-import Investor from '../Investor/Investor';
-import About from '../About/About';
-import Contact from '../Contact/Contact';
-import Press from '../Press/Press';
-import Faq from '../Faq/Faq';
-import Error404 from '../Error/Error404';
-import Error500 from '../Error/Error500';
-import Robot from '../Robot/Robot';
 import $ from 'jquery';
 import ReactGA from 'react-ga';
 import GoogleTag from './GoogleTag';
+import Router from './Router';
+
 class App extends React.Component {
   constructor() {
     super();
@@ -50,23 +36,7 @@ class App extends React.Component {
       <div className="off-canvas-container">
         <Header />
         <GoogleTag gtmId='GTM-T8CG9SD' />
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path='/whitepaper' component={WhitePaper} />
-          <Route path='/companies' component={Companies} />
-          <Route path='/airdrop' component={AirDrop} />
-          <Route path='/term' component={Term} />
-          <Route path='/privacy' component={Privacy} />
-          <Route path='/investor' component={Investor} />
-          <Route path='/about' component={About} />
-          <Route path='/contact' component={Contact} />
-          <Route path='/press' component={Press} />
-          <Route path='/faq' component={Faq} />
-          <Route path='/404' component={Error404} />
-          <Route path='/500' component={Error500} />
-          <Route path='/robot.txt' component={Robot} />
-          <Route component={Error404} />
-        </Switch>
+        <Router />
         <Footer />
       </div>
     );
