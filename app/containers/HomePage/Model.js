@@ -1,6 +1,5 @@
 import React from 'react';
 import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
-import Request from 'react-http-request';
 class Model extends React.Component {
   state = { entrepreneur: false, investor: false, form: true, country: '', FNAME: '', LNAME: '', EMAIL: '', REF_CODE: '', INVEST_AMT: '', COMPANY: '', USER_TYPE: '' }
   selectCountry(val) {
@@ -29,7 +28,7 @@ class Model extends React.Component {
   renderForm() {
     const { country, FNAME, LNAME, EMAIL, REF_CODE, INVEST_AMT, COMPANY, USER_TYPE } = this.state;
     return (
-      <div className="modal-body">
+      <div className="modal-body modal-body-first">
         <h2>We're Making Investing in Companies More Intuitive.</h2>
         <p>A straightforward investment method based on revenue sharing &amp; the blockchain.</p>
         <div className="investing-form">
@@ -89,46 +88,28 @@ class Model extends React.Component {
             <div className="mc_form_submit_subscription text-center my-3">
               <input type="submit" value="Request Early Access"
                 onClick={() => {
-                  this.setState({ entrepreneur: false, investor: false });
-                  // fetch('https://us13.api.mailchimp.com/3.0/lists/76a7c94746/members', {
-                  //   method: 'POST',
-                  //   headers: {
-                  //     'Authorization': 'apikey 460949c257c9c616313928b054f967df-us13',
-                  //     'Content-Type': 'application/json'
-                  //   },
-                  //   body: JSON.stringify({
-                  //     "FNAME": FNAME,
-                  //     "LNAME": LNAME,
-                  //     "email_address": EMAIL,
-                  //     "COMPANY": COMPANY,
-                  //     "USER_TYPE": USER_TYPE,
-                  //     "email_type": "html",
-                  //     "status": "subscribed",
-                  //     "COUNTRY": country
-                  //   }
-                  //   )
-                  // }).then(res => {
-                  //   console.log(res)
-                  // })
-                  {
-                    < Request
-                      url='https://us13.api.mailchimp.com/3.0/lists/76a7c94746/members'
-                      method='post'
-                      accept='application/json'
-                      authorization='apikey 460949c257c9c616313928b054f967df-us13'
-                      verbose={true}
-                    >
-                      {
-                        ({ error, result, loading }) => {
-                          if (loading) {
-                            return <div>loading...</div>;
-                          } else {
-                            return <div>{JSON.stringify(result)}</div>;
-                          }
-                        }
-                      }
-                    </Request>
-                  }
+                  this.setState({ entrepreneur: false, investor: false, form:false });
+                  fetch('https://us13.api.mailchimp.com/3.0/lists/76a7c94746/members', {
+                    method: 'POST',
+                    headers: {
+                      'Authorization': 'apikey 460949c257c9c616313928b054f967df-us13',
+                      'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                      "FNAME": FNAME,
+                      "LNAME": LNAME,
+                      "email_address": EMAIL,
+                      "COMPANY": COMPANY,
+                      "USER_TYPE": USER_TYPE,
+                      "email_type": "html",
+                      "status": "subscribed",
+                      "COUNTRY": country
+                    }
+                    )
+                  }).then(res => {
+                    console.log(res)
+                  })
+                  
                 }}
               />
             </div>
@@ -144,7 +125,7 @@ class Model extends React.Component {
           <div className="row justify-content-center" id="fill-form-id">
             <div className="col col-12 col-lg-7 fill-form nice-fill">
               <h2>Nice! You're in!</h2>
-              <p className="mdText">You have reserved a spot on our Corl Token Airdrop. Stay tuned!</p>
+              <p className="mdText">You have joined our waiting list. Stay tuned!</p>
               <p className="smText">In the meantime, please follow us on social media!</p>
               <ul className="mc_optin_share">
                 <li>

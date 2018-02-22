@@ -7,6 +7,7 @@ injectGlobal`
 
   body{
     font-family: 'Open Sans', sans-serif;
+    color: #3b3b3c;
   }
   ul{
     padding: 0;
@@ -95,7 +96,7 @@ injectGlobal`
     background-color: #03aac4;
     border: 2px solid #03aac4;
     border-radius: 20px;
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: none;
     line-height: 1.7em;
     -webkit-transition: all .2s;
@@ -375,6 +376,8 @@ margin-bottom: 10px;
 text-align: center;
 }
 .nice-fill .smText {
+  font-size: 1rem;
+  opacity: 1;
   text-align: center;
   margin: 30px 0 15px 0;
 }
@@ -389,6 +392,25 @@ text-align: center;
   font-size: 25px;
   margin: 10px;
 }
+.nice-fill p.text-center.my-3,
+.nice-fill .share_link_title,
+.nice-fill #refLink{
+  opacity: 1;
+  font-size: 1rem;
+}
+.nice-fill .share_link_title{
+  margin-bottom: 1rem;
+  margin-top: 0.25rem;
+}
+.nice-fill #refLink a:hover,
+.nice-fill #refLink a:focus{
+  text-decoration: none;
+}
+// .investment-modal .modal-body-first h2{
+//   padding-bottom: 3rem;
+//   margin-bottom: 3rem;
+//   margin-top: 1.5rem;
+// }
 .nice-fill .btn-green {
 border: solid 2px;
 border-color: #97C355;
@@ -610,7 +632,7 @@ font-weight: 600;
   .mc_form_submit_subscription input{
     color: #ffffff;
     background-color: #97C355;
-    font-weight: 600;
+    font-weight: 400;
     padding: 0.3em 1em;
     transition: all 0.5s;
     font-size: 18px;

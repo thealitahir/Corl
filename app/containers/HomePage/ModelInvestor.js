@@ -9,8 +9,9 @@ class ModelInvestor extends React.Component {
   renderForm() {
     const { country } = this.state;
     return (
-      <div className="modal-body">
-        <h2>Get Whitelisted for the Corl Token Sale</h2>
+      <div className="modal-body modal-body-first">
+        <h2>Keep up with Corl News & Announcements</h2>
+        <p>&nbsp;</p>
         {/* <p>A straightforward investment method based on revenue sharing &amp; the blockchain.</p> */}
         <div className="investing-form">
           <form>
@@ -46,7 +47,7 @@ class ModelInvestor extends React.Component {
 
 
             <div className="mc_form_submit_subscription text-center my-3">
-              <input onClick={() => { this.setState({ form: false }) }} type="submit" value="Confirm Whitelisting" />
+              <input onClick={() => { this.setState({ form: false }) }} type="submit" value="Join Waitlist" />
             </div>
           </form>
         </div>
@@ -58,9 +59,9 @@ class ModelInvestor extends React.Component {
       <div className="modal-body">
         <div className="airdrop-container">
           <div className="row justify-content-center" id="fill-form-id">
-            <div className="col col-12 col-lg-7 fill-form nice-fill">
-              <h2>Nice! You're in!</h2>
-              <p className="mdText">You have reserved a spot on our Corl Token Airdrop. Stay tuned!</p>
+            <div className="col col-12 col-lg-8 fill-form nice-fill">
+              <h2 className="mb-5 pb-5 mt-4">Nice! You're in!</h2>
+              <p className="mdText">You have joined our waiting list. Stay tuned!</p>
               <p className="smText">In the meantime, please follow us on social media!</p>
               <ul className="mc_optin_share">
                 <li>

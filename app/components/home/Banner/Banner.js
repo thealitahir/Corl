@@ -13,7 +13,7 @@ class Banner extends React.Component { // eslint-disable-line react/prefer-state
         <div className="revenue-sharing py-sections">
           <div className="container-wide mx-auto">
             <div className="row">
-              <div className="col col-12 col-lg-6">
+              <div className="col col-12 col-lg-7">
                 <div className="revenue-sharing-content">
                   <h1>Revenue sharing on the blockchain</h1>
                   <p>The world's first revenue-sharing token designed to support and participate in the growth of emerging companies.</p>

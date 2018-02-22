@@ -4,8 +4,9 @@ class ModelCompany extends React.Component {
   state = { entrepreneur: false, investor: false, form: true }
   renderForm() {
     return (
-      <div className="modal-body">
+      <div className="modal-body modal-body-first">
         <h2>Get Early Access & Reserve Your Funding Spot</h2>
+        <p>&nbsp;</p>
         {/* <p>A straightforward investment method based on revenue sharing &amp; the blockchain.</p> */}
         <div className="investing-form">
           <form>
@@ -38,7 +39,7 @@ class ModelCompany extends React.Component {
       <div className="modal-body">
         <div className="airdrop-container">
           <div className="row justify-content-center" id="fill-form-id">
-            <div className="col col-12 col-lg-7 fill-form nice-fill">
+            <div className="col col-12 col-lg-8 fill-form nice-fill">
               <h2>Nice! You're in!</h2>
               <p className="mdText">You have reserved a spot on our Corl Token Airdrop. Stay tuned!</p>
               <p className="smText">In the meantime, please follow us on social media!</p>
@@ -57,7 +58,7 @@ class ModelCompany extends React.Component {
                 </li>
               </ul>
               <p className="text-center my-3"><a target="_blank" href="https://t.me/corltoken" className="btn-green"><i className="fa fa-telegram"></i> Join us on Telegram</a></p>
-              <p className="share_link_title my-3 text-center">Or share this unique link:</p>
+              <p className="share_link_title text-center">Or share this unique link:</p>
               <p id="refLink" className="text-center"><a href="https://www.corl.io?ref=ctVf5wpbtb">https://www.corl.io?ref=ctVf5wpbtb</a></p>
             </div>
           </div>
