@@ -9,7 +9,7 @@ class Model extends React.Component {
   renderForm() {
     const { country } = this.state;
     return (
-      <div className="modal-body">
+      <div className="modal-body modal-body-first">
         <h2>We're Making Investing in Companies More Intuitive.</h2>
         <p>A straightforward investment method based on revenue sharing &amp; the blockchain.</p>
         <div className="investing-form">
@@ -81,7 +81,7 @@ class Model extends React.Component {
           <div className="row justify-content-center" id="fill-form-id">
             <div className="col col-12 col-lg-7 fill-form nice-fill">
               <h2>Nice! You're in!</h2>
-              <p className="mdText">You have reserved a spot on our Corl Token Airdrop. Stay tuned!</p>
+              <p className="mdText">You have joined our waiting list. Stay tuned!</p>
               <p className="smText">In the meantime, please follow us on social media!</p>
               <ul className="mc_optin_share">
                 <li>

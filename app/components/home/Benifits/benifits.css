@@ -13,6 +13,11 @@
 .benefits-block .benefits-detail{
 	padding: 20px
 }
+.benefits-block .benefits-detail a,
+.benefits-block .benefits-detail a:hover{
+	color: #03aac4;
+	cursor: pointer;
+}
 .benefits-block .benefits-detail-head{
 	margin-bottom: 28px;
 }

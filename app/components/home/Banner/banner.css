@@ -98,6 +98,12 @@
       min-height: 40px;
     }
   }
+  @media(max-width: 768px){
+    .revenue-sharing {
+      background-image: url('../../../images/header-illustration-mobile.png');
+      background-position: right bottom;
+    }
+  }
   @media(max-width: 480px) {
     .media-et-module {
       width: 100%;
