@@ -1,8 +1,25 @@
 import React from 'react';
+import FbPixel from '../App/FbPixel'
 
 class ModelCompany extends React.Component {
-  state = { entrepreneur: false, investor: false, form: true }
+  state = { entrepreneur: false, investor: false, form: true, FNAME: '', LNAME: '', EMAIL: '', COMPANY: '' }
+
+  handleFName(e) {
+    this.setState({ FNAME: e.target.value })
+  }
+  handleLName(e) {
+    this.setState({ LNAME: e.target.value })
+  }
+  handleEmail(e) {
+    this.setState({ EMAIL: e.target.value })
+  }
+  handleCompany(e) {
+    this.setState({ COMPANY: e.target.value })
+  }
+
   renderForm() {
+    const { FNAME, LNAME, EMAIL, COMPANY } = this.state;
+
     return (
       <div className="modal-body modal-body-first">
         <h2>Get Early Access & Reserve Your Funding Spot</h2>
@@ -11,23 +28,47 @@ class ModelCompany extends React.Component {
         <div className="investing-form">
           <form>
             <div className="investing-field">
-              <input className="input-field" type="text" placeholder="Your First Name" required="" />
+              <input className="input-field" type="text" value={this.state.FNAME} onChange={this.handleFName.bind(this)} placeholder="Your First Name" required />
             </div>
             <div className="investing-field">
-              <input className="input-field" type="text" placeholder="Your Last Name" required="" />
+              <input className="input-field" type="text" value={this.state.LNAME} onChange={this.handleLName.bind(this)} placeholder="Your Last Name" required />
             </div>
             <div className="investing-field">
-              <input className="input-field" type="email" placeholder="Your Work Email" required="" />
+              <input className="input-field" type="email" value={this.state.EMAIL} onChange={this.handleEmail.bind(this)} placeholder="Your Work Email" required />
             </div>
 
             <div className="investing-field">
-              <input className="input-field" type="text" placeholder="Your Company Name" required="" />
+              <input className="input-field" type="text" value={this.state.COMPANY} onChange={this.handleCompany.bind(this)} placeholder="Your Company Name" required />
             </div>
 
 
 
             <div className="mc_form_submit_subscription text-center my-3">
-              <input onClick={() => { this.setState({ form: false }) }} type="submit" value="Request Early Access" />
+              <input type="submit" value="Request Early Access"
+                onClick={() => {
+                  FbPixel.trackCustom('Early Access Signup - Submit', {});
+
+                  fetch('https://us13.api.mailchimp.com/3.0/lists/76a7c94746/members', {
+                    method: 'POST',
+                    headers: {
+                      'Authorization': 'apikey 460949c257c9c616313928b054f967df-us13',
+                      'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                      "FNAME": FNAME,
+                      "LNAME": LNAME,
+                      "email_address": EMAIL,
+                      "COMPANY": COMPANY,
+                      "email_type": "html",
+                      "status": "subscribed"
+                    }
+                    )
+                  }).then(res => {
+                    this.setState({ form: false });
+                  })
+
+                }}
+              />
             </div>
           </form>
         </div>

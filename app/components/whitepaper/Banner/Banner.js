@@ -25,7 +25,7 @@ class Banner extends React.Component { // eslint-disable-line react/prefer-state
                         <div className="et_pb_fullwidth_header_scroll"></div>
                     </section>
                 </div>
-                <Timer />
+                {/* <Timer /> */}
             </div>
 
         );

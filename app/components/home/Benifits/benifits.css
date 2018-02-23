@@ -15,7 +15,7 @@
 }
 .benefits-block .benefits-detail a,
 .benefits-block .benefits-detail a:hover{
-	color: #03aac4;
+	color: #03aac4 !important;
 	cursor: pointer;
 }
 .benefits-block .benefits-detail-head{

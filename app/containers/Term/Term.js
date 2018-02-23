@@ -1,5 +1,8 @@
 import React from 'react';
 class Term extends React.Component {
+  componentWillMount() {
+    document.title = "Terms of Use | Revenue share on the blockchain | Corl";
+  }
   render() {
     return (
       <div className="main-content">

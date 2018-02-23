@@ -1,5 +1,7 @@
 import React from 'react';
 import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
+import FbPixel from '../App/FbPixel'
+
 class Model extends React.Component {
   state = { entrepreneur: false, investor: false, form: true, country: '', FNAME: '', LNAME: '', EMAIL: '', REF_CODE: '', INVEST_AMT: '', COMPANY: '', USER_TYPE: '' }
   selectCountry(val) {
@@ -34,26 +36,26 @@ class Model extends React.Component {
         <div className="investing-form">
           <form id="mc4wp-form-3" method="post" data-id="26494" data-name="Corl Early Access - General" >
             <div className="investing-field">
-              <input className="input-field" type="text" value={this.state.FNAME} onChange={this.handleFName.bind(this)} name="FNAME" placeholder="Your First Name" required="" />
+              <input className="input-field" type="text" value={this.state.FNAME} onChange={this.handleFName.bind(this)} name="FNAME" placeholder="Your First Name" required />
             </div>
             <div className="investing-field">
-              <input className="input-field" type="text" value={this.state.LNAME} onChange={this.handleLName.bind(this)} name="LNAME" placeholder="Your Last Name" required="" />
+              <input className="input-field" type="text" value={this.state.LNAME} onChange={this.handleLName.bind(this)} name="LNAME" placeholder="Your Last Name" required/>
             </div>
             <div className="investing-field">
-              <input className="input-field" type="email" value={this.state.EMAIL} onChange={this.handleEmail.bind(this)} name="EMAIL" placeholder="Your Work Email" required="" />
+              <input className="input-field" type="email" value={this.state.EMAIL} onChange={this.handleEmail.bind(this)} name="EMAIL" placeholder="Your Work Email" required/>
             </div>
             <div className="investing-field">
               <input className="input-field" type="hidden" name="REF_CODE" value="" />
             </div>
             <div className="mc_form_input mc_form_subscribe_type">
               <label>I am an:</label>
-              <span className="entrepreneur"><input name="USER_TYPE" value={this.state.USER_TYPE} onChange={this.handleType.bind(this)} type="radio" id="businessType" value="Entrepreneur" onClick={() => { this.setState({ entrepreneur: true, investor: false }) }} required="" /> Entrepreneur</span>
-              <span className="investor"><input name="USER_TYPE" value={this.state.USER_TYPE} onChange={this.handleType.bind(this)} type="radio" id="investorType" value="Investor" onClick={() => { this.setState({ entrepreneur: false, investor: true }) }} required="" /> Investor</span>
+              <span className="entrepreneur"><input name="USER_TYPE" value={this.state.USER_TYPE} onChange={this.handleType.bind(this)} type="radio" id="businessType" value="Entrepreneur" onClick={() => { this.setState({ entrepreneur: true, investor: false }) }} required /> Entrepreneur</span>
+              <span className="investor"><input name="USER_TYPE" value={this.state.USER_TYPE} onChange={this.handleType.bind(this)} type="radio" id="investorType" value="Investor" onClick={() => { this.setState({ entrepreneur: false, investor: true }) }} required /> Investor</span>
             </div>
             {
               this.state.entrepreneur ?
                 <div className="investing-field">
-                  <input className="input-field" value={this.state.COMPANY} onChange={this.handleCompany.bind(this)} name="COMPANY" type="text" placeholder="Your Company Name" required="" />
+                  <input className="input-field" value={this.state.COMPANY} onChange={this.handleCompany.bind(this)} name="COMPANY" type="text" placeholder="Your Company Name"  />
                 </div>
                 :
                 null
@@ -67,9 +69,9 @@ class Model extends React.Component {
                       onChange={(val) => this.selectCountry(val)} />
                   </div>
 
-                  <div className="form-field">
+                  {/* <div className="form-field">
                     <label>Please indicate the amount with which you want to participate in the token sale (in USD).</label>
-                    <select value={this.state.INVEST_AMT} onChange={this.handleInvest.bind(this)} name="INVEST_AMT" required="" className="select-field">
+                    <select value={this.state.INVEST_AMT} onChange={this.handleInvest.bind(this)} name="INVEST_AMT"  className="select-field">
                       <option value="">Choose an amount</option>
                       <option value="USD < 100">USD &lt; 100</option>
                       <option value="USD 100 - 1000">USD 100 - 1000</option>
@@ -79,7 +81,7 @@ class Model extends React.Component {
                       <option value="USD 50,000 - 100,000">USD 50,000 - 100,000</option>
                       <option value="USD > 100,000">USD &gt; 100,000</option>
                     </select>
-                  </div>
+                  </div> */}
                 </div>
                 :
                 null
@@ -88,7 +90,8 @@ class Model extends React.Component {
             <div className="mc_form_submit_subscription text-center my-3">
               <input type="submit" value="Request Early Access"
                 onClick={() => {
-                  this.setState({ entrepreneur: false, investor: false, form:false });
+                  FbPixel.trackCustom('Early Access Signup - Submit', {});
+                  this.setState({ entrepreneur: false, investor: false });
                   fetch('https://us13.api.mailchimp.com/3.0/lists/76a7c94746/members', {
                     method: 'POST',
                     headers: {
@@ -103,13 +106,15 @@ class Model extends React.Component {
                       "USER_TYPE": USER_TYPE,
                       "email_type": "html",
                       "status": "subscribed",
-                      "COUNTRY": country
+                      "COUNTRY": country,
+                      "INVEST_AMT": INVEST_AMT
                     }
                     )
                   }).then(res => {
-                    console.log(res)
+                    this.setState({ form: false });
+
                   })
-                  
+
                 }}
               />
             </div>

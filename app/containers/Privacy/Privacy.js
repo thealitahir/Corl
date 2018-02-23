@@ -1,5 +1,8 @@
 import React from 'react';
 class Privacy extends React.Component {
+  componentWillMount() {
+    document.title = "Privacy Policy | Revenue share on the blockchain | Corl";
+  }
   render() {
     return (
       <div className="main-content">

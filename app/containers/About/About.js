@@ -7,7 +7,11 @@ import Team from '../../components/about/Team/Team';
 import Model from '../HomePage/Model';
 
 class About extends React.Component {
+
   state = { showModel: false }
+  componentWillMount() {
+    document.title = "About";
+  }
   renderModel() {
     return (
       <Model

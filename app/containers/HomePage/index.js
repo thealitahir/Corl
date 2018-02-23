@@ -19,7 +19,9 @@ import Works from '../../components/home/Works/Works';
 import Model from './Model';
 
 class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
-
+  componentWillMount() {
+    document.title = "Revenue share on the blockchain | Corl";
+  }
   state = { showModel: false }
   renderModel() {
     return (

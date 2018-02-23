@@ -15,10 +15,10 @@ class Invester extends React.Component { // eslint-disable-line react/prefer-sta
                                     How does Corl work?
                     </button>
                                 <span className="card-collapse-icons mr-2 pr-1">
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-plus">
+                                    <a href="" className="card-collapse-plus">
                                         <i className="fa fa-plus" aria-hidden="true"></i>
                                     </a>
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-minus">
+                                    <a href="" className="card-collapse-minus">
                                         <i className="fa fa-minus" aria-hidden="true"></i>
                                     </a>
                                 </span>
@@ -37,10 +37,10 @@ class Invester extends React.Component { // eslint-disable-line react/prefer-sta
                                     What am I investing in?
                     </button>
                                 <span className="card-collapse-icons mr-2 pr-1">
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-plus">
+                                    <a href="" className="card-collapse-plus">
                                         <i className="fa fa-plus" aria-hidden="true"></i>
                                     </a>
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-minus">
+                                    <a href="" className="card-collapse-minus">
                                         <i className="fa fa-minus" aria-hidden="true"></i>
                                     </a>
                                 </span>
@@ -60,10 +60,10 @@ class Invester extends React.Component { // eslint-disable-line react/prefer-sta
                                     Who can invest?
                     </button>
                                 <span className="card-collapse-icons mr-2 pr-1">
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-plus">
+                                    <a href="" className="card-collapse-plus">
                                         <i className="fa fa-plus" aria-hidden="true"></i>
                                     </a>
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-minus">
+                                    <a href="" className="card-collapse-minus">
                                         <i className="fa fa-minus" aria-hidden="true"></i>
                                     </a>
                                 </span>
@@ -72,7 +72,7 @@ class Invester extends React.Component { // eslint-disable-line react/prefer-sta
                         <div id="collapseFourteen" className="collapse" aria-labelledby="headingFourteen" data-parent="#accordion">
                             <div className="card-body">
                                 <p className="light-text">The nice thing about blockchain is that it will offer anyone from any part of the world the chance to invest in technology companies using Ether (ETH), generating profits paid in ETH. We are currently working with the Canadian regulators to ensure compliance for all type of investors. We will be providing more information prior to our launch.</p>
-                                <p className="light-text mb-0"><a href="#crl-token-presale">Get Whitelisted</a> to stay updated as we open up the platform to early investors.</p>
+                                <p className="light-text mb-0"><a href="" onClick={() => { this.props.openInvestorModel(true) }}>Get Whitelisted</a> to stay updated as we open up the platform to early investors.</p>
                             </div>
                         </div>
                     </div>
@@ -83,10 +83,10 @@ class Invester extends React.Component { // eslint-disable-line react/prefer-sta
                                     Why invest with Corl?
                     </button>
                                 <span className="card-collapse-icons mr-2 pr-1">
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-plus">
+                                    <a href="" className="card-collapse-plus">
                                         <i className="fa fa-plus" aria-hidden="true"></i>
                                     </a>
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-minus">
+                                    <a href="" className="card-collapse-minus">
                                         <i className="fa fa-minus" aria-hidden="true"></i>
                                     </a>
                                 </span>
@@ -96,7 +96,7 @@ class Invester extends React.Component { // eslint-disable-line react/prefer-sta
                             <div className="card-body">
                                 <p className="light-text">Investing in technology companies is a great way to put your money to work for both compelling returns and measurable impact. But it’s difficult for most investors to participate in this opportunity.</p>
                                 <p className="light-text">This is where Corl comes in.</p>
-                                <p className="light-text mb-0">Our revenue-sharing (a.k.a revenue-based financing) investments are backed by a diversified portfolio of loans in emerging companies that are already operational and generating steady revenues – revenues that are used to pay investors like you. <a href="#crl-token-presale">Get Whitelisted</a></p>
+                                <p className="light-text mb-0">Our revenue-sharing (a.k.a revenue-based financing) investments are backed by a diversified portfolio of loans in emerging companies that are already operational and generating steady revenues – revenues that are used to pay investors like you. <a href="" onClick={() => { this.props.openInvestorModel(true) }}>Get Whitelisted</a></p>
                             </div>
                         </div>
                     </div>
@@ -107,10 +107,10 @@ class Invester extends React.Component { // eslint-disable-line react/prefer-sta
                                     What happens when  companies you invested in are sold or go public?
                     </button>
                                 <span className="card-collapse-icons mr-2 pr-1">
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-plus">
+                                    <a href="" className="card-collapse-plus">
                                         <i className="fa fa-plus" aria-hidden="true"></i>
                                     </a>
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-minus">
+                                    <a href="" className="card-collapse-minus">
                                         <i className="fa fa-minus" aria-hidden="true"></i>
                                     </a>
                                 </span>
@@ -129,10 +129,10 @@ class Invester extends React.Component { // eslint-disable-line react/prefer-sta
                                     What IRR are you targeting for the investments?
                     </button>
                                 <span className="card-collapse-icons mr-2 pr-1">
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-plus">
+                                    <a href="" className="card-collapse-plus">
                                         <i className="fa fa-plus" aria-hidden="true"></i>
                                     </a>
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-minus">
+                                    <a href="" className="card-collapse-minus">
                                         <i className="fa fa-minus" aria-hidden="true"></i>
                                     </a>
                                 </span>
@@ -151,10 +151,10 @@ class Invester extends React.Component { // eslint-disable-line react/prefer-sta
                                     If Corl is running a token sale, where is the White Paper?
                     </button>
                                 <span className="card-collapse-icons mr-2 pr-1">
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-plus">
+                                    <a href="" className="card-collapse-plus">
                                         <i className="fa fa-plus" aria-hidden="true"></i>
                                     </a>
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-minus">
+                                    <a href="" className="card-collapse-minus">
                                         <i className="fa fa-minus" aria-hidden="true"></i>
                                     </a>
                                 </span>

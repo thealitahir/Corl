@@ -1,10 +1,11 @@
 import React from 'react';
 import "./form.css";
 import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
-// var ethereum_address = require('ethereum-address');
+// import ethereum_address from 'ethereum-address';
+import FbPixel from '../../../containers/App/FbPixel'
 
 class Form extends React.Component { // eslint-disable-line react/prefer-stateless-function
-    state = { flag: false, country: '', ethValue: "" }
+    state = { flag: false, country: '', ethValue: "", FNAME: '', LNAME: '', EMAIL: '', TELEGRAM_NAME: '', INVEST_AMT: '', TWITTER_NAME: '' }
     selectCountry(val) {
         this.setState({ country: val });
     }
@@ -12,17 +13,34 @@ class Form extends React.Component { // eslint-disable-line react/prefer-statele
         this.setState({
             ethValue: evt.target.value
         });
-        console.log(this.state.ethValue);
 
         // if (ethereum_address.isAddress(this.state.ethValue)) {
-        //     console.log('Valid ethereum address.');
+
         // }
         // else {
-        //     console.log('Invalid Ethereum address.');
+
         // }
     }
+    handleFName(e) {
+        this.setState({ FNAME: e.target.value })
+    }
+    handleLName(e) {
+        this.setState({ LNAME: e.target.value })
+    }
+    handleEmail(e) {
+        this.setState({ EMAIL: e.target.value })
+    }
+    handleTelegram(e) {
+        this.setState({ TELEGRAM_NAME: e.target.value })
+    }
+    handleTwitter(e) {
+        this.setState({ TWITTER_NAME: e.target.value })
+    }
+    handleInvest(e) {
+        this.setState({ INVEST_AMT: e.target.value })
+    }
     renderForm() {
-        const { country } = this.state;
+        const { country, FNAME, LNAME, EMAIL, INVEST_AMT, TELEGRAM_NAME, TWITTER_NAME, ethValue } = this.state;
         return (
             <div className="airdrop-container airdrop-container-form pb-5">
                 <div className="row justify-content-center" id="fill-form-id">
@@ -30,23 +48,23 @@ class Form extends React.Component { // eslint-disable-line react/prefer-statele
                         <h2>Fill the Form</h2>
                         <form>
                             <div className="form-field">
-                                <input type="text" className="input-field" name="FNAME" placeholder="Your First Name" required="" />
+                                <input type="text" className="input-field" value={this.state.FNAME} onChange={this.handleFName.bind(this)} name="FNAME" placeholder="Your First Name" required />
                             </div>
                             <div className="form-field">
-                                <input type="text" className="input-field" name="LNAME" placeholder="Your Last Name" required="" />
+                                <input type="text" className="input-field" value={this.state.LNAME} onChange={this.handleLName.bind(this)} name="LNAME" placeholder="Your Last Name" required />
                             </div>
                             <div className="form-field">
-                                <input type="email" className="input-field" name="EMAIL" placeholder="Your Email Address" required="" />
+                                <input type="email" className="input-field" value={this.state.EMAIL} onChange={this.handleEmail.bind(this)} name="EMAIL" placeholder="Your Email Address" required />
                             </div>
                             <div className="form-field">
-                                <input type="text" className="input-field" name="TELEGRAM" placeholder="Your Telegram Username" required="" />
+                                <input type="text" value={this.state.TELEGRAM_NAME} onChange={this.handleTelegram.bind(this)} className="input-field" name="TELEGRAM" placeholder="Your Telegram Username" required />
                             </div>
                             <div className="form-field">
-                                <input type="text" className="input-field" name="TWITTER" placeholder="Your Twitter Username" required="" />
+                                <input type="text" value={this.state.TWITTER_NAME} onChange={this.handleTwitter.bind(this)} className="input-field" name="TWITTER" placeholder="Your Twitter Username" required />
                             </div>
-                            <div className="form-field">
+                            {/* <div className="form-field">
                                 <label>Please indicate the amount with which you want to participate in the token sale (in USD).</label>
-                                <select name="INVEST_AMT" required="" className="select-field">
+                                <select value={this.state.INVEST_AMT} onChange={this.handleInvest.bind(this)} name="INVEST_AMT" required className="select-field">
                                     <option value="">Choose an amount</option>
                                     <option value="USD < 100">USD &lt; 100</option>
                                     <option value="USD 100 - 1000">USD 100 - 1000</option>
@@ -56,12 +74,12 @@ class Form extends React.Component { // eslint-disable-line react/prefer-statele
                                     <option value="USD 50,000 - 100,000">USD 50,000 - 100,000</option>
                                     <option value="USD > 100,000">USD &gt; 100,000</option>
                                 </select>
-                            </div>
+                            </div> */}
 
 
 
                             <div className="form-field">
-                                <input type="text" className="input-field" name="ETH_ADDR" placeholder="Your ETH Address" required="" value={this.state.ethValue} onChange={this.updateValue.bind(this)} />
+                                <input type="text" className="input-field" name="ETH_ADDR" placeholder="Your ETH Address" required value={this.state.ethValue} onChange={this.updateValue.bind(this)} />
                             </div>
 
 
@@ -71,7 +89,35 @@ class Form extends React.Component { // eslint-disable-line react/prefer-statele
                                     onChange={(val) => this.selectCountry(val)} />
                             </div>
                             <div className="form-field mc_form_submit_subscription">
-                                <input type="submit" value="Join Airdrop" onClick={() => { this.setState({ flag: true }) }} className="submit-btn" />
+                                <input type="submit" value="Join Airdrop" className="submit-btn"
+                                    onClick={() => {
+                                        FbPixel.trackCustom('Token Presale Signup', {});
+
+                                        fetch('https://us13.api.mailchimp.com/3.0/lists/76a7c94746/members', {
+                                            method: 'POST',
+                                            headers: {
+                                                'Authorization': 'apikey 460949c257c9c616313928b054f967df-us13',
+                                                'Content-Type': 'application/json'
+                                            },
+                                            body: JSON.stringify({
+                                                "FNAME": FNAME,
+                                                "LNAME": LNAME,
+                                                "email_address": EMAIL,
+                                                "TWITTER_NAME": TWITTER_NAME,
+                                                "TELEGRAM_NAME": TELEGRAM_NAME,
+                                                "email_type": "html",
+                                                "status": "subscribed",
+                                                "COUNTRY": country,
+                                                "INVEST_AMT": INVEST_AMT
+                                            }
+                                            )
+                                        }).then(res => {
+                                            this.setState({ form: true });
+                                        })
+
+                                    }}
+
+                                />
                             </div>
                         </form>
                     </div>

@@ -2,12 +2,10 @@ import React from 'react';
 import "./banner.css";
 import image from '../../../images/1f680.svg';
 import image1 from '../../../images/1f680.svg';
-// import FbPixel from '../../containers/App/FbPixel'
 
 class Banner extends React.Component { // eslint-disable-line react/prefer-stateless-function
-    // func() {
-    //     console.log('khan');
-    // }
+
+
     render() {
 
         return (
@@ -22,7 +20,7 @@ class Banner extends React.Component { // eslint-disable-line react/prefer-state
                                     <div className="et_pb_header_content  ">
                                         <div className="text fs fs-20 ">To join our token sale, please fill out the whitelist form. Once the whitelist reaches a max capacity. It will be closed.</div>
                                     </div>
-                                    <a href="#airdrop-tasks"  className="animatedowmn et_pb_more_button et_pb_button et_pb_button_one">Join Airdrop</a>
+                                    <a href="#airdrop-tasks" className="animatedowmn et_pb_more_button et_pb_button et_pb_button_one">Join Airdrop</a>
                                 </div>
                             </div>
                         </div>
@@ -34,6 +32,7 @@ class Banner extends React.Component { // eslint-disable-line react/prefer-state
             </div>
 
         );
+
     }
 }
 

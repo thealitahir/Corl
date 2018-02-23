@@ -17,10 +17,10 @@ class Entrepreneur extends React.Component { // eslint-disable-line react/prefer
                                     What type of companies does Corl fund?
                     </button>
                                 <span className="card-collapse-icons mr-2 pr-1">
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-plus">
+                                    <a href=" " className="card-collapse-plus">
                                         <i className="fa fa-plus" aria-hidden="true"></i>
                                     </a>
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-minus">
+                                    <a href=" " className="card-collapse-minus">
                                         <i className="fa fa-minus" aria-hidden="true"></i>
                                     </a>
                                 </span>
@@ -39,10 +39,10 @@ class Entrepreneur extends React.Component { // eslint-disable-line react/prefer
                                     What do I owe in return?
                     </button>
                                 <span className="card-collapse-icons mr-2 pr-1">
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-plus">
+                                    <a href=" " className="card-collapse-plus">
                                         <i className="fa fa-plus" aria-hidden="true"></i>
                                     </a>
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-minus">
+                                    <a href=" " className="card-collapse-minus">
                                         <i className="fa fa-minus" aria-hidden="true"></i>
                                     </a>
                                 </span>
@@ -61,10 +61,10 @@ class Entrepreneur extends React.Component { // eslint-disable-line react/prefer
                                     Can pre-revenue companies apply for Revenue Sharing?
                     </button>
                                 <span className="card-collapse-icons mr-2 pr-1">
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-plus">
+                                    <a href=" " className="card-collapse-plus">
                                         <i className="fa fa-plus" aria-hidden="true"></i>
                                     </a>
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-minus">
+                                    <a href=" " className="card-collapse-minus">
                                         <i className="fa fa-minus" aria-hidden="true"></i>
                                     </a>
                                 </span>
@@ -73,7 +73,7 @@ class Entrepreneur extends React.Component { // eslint-disable-line react/prefer
                         <div id="collapseSeven" className="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
                             <div className="card-body">
                                 <p className="light-text">Our revenue sharing or revenue-based financing model is best suited for companies that have been generating a consistent revenue in the past 6-12 months.</p>
-                                <p className="light-text mb-0">If you’re a pre-revenue company, you can still <a href="#earlyaccess">request early access</a> so that we can keep you on our radar. You can also <a href="https://corl.io/blog/">sign up for our newsletter</a> to receive occasional emails containing company resources, news, and tips on how to grow your business. We encourage you to keep us in mind when you get further with your revenue model.</p>
+                                <p className="light-text mb-0">If you’re a pre-revenue company, you can still <a href="" onClick={() => this.props.setModelFlag(true)}>request early access</a> so that we can keep you on our radar. You can also <a href="https://blog.corl.io/">sign up for our newsletter</a> to receive occasional emails containing company resources, news, and tips on how to grow your business. We encourage you to keep us in mind when you get further with your revenue model.</p>
                             </div>
                         </div>
                     </div>
@@ -84,10 +84,10 @@ class Entrepreneur extends React.Component { // eslint-disable-line react/prefer
                                     How much funding can I get from Corl?
                     </button>
                                 <span className="card-collapse-icons mr-2 pr-1">
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-plus">
+                                    <a href=" " className="card-collapse-plus">
                                         <i className="fa fa-plus" aria-hidden="true"></i>
                                     </a>
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-minus">
+                                    <a href=" " className="card-collapse-minus">
                                         <i className="fa fa-minus" aria-hidden="true"></i>
                                     </a>
                                 </span>
@@ -106,10 +106,10 @@ class Entrepreneur extends React.Component { // eslint-disable-line react/prefer
                                     Is Corl available to businesses outside of Canada?
                     </button>
                                 <span className="card-collapse-icons mr-2 pr-1">
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-plus">
+                                    <a href=" " className="card-collapse-plus">
                                         <i className="fa fa-plus" aria-hidden="true"></i>
                                     </a>
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-minus">
+                                    <a href=" " className="card-collapse-minus">
                                         <i className="fa fa-minus" aria-hidden="true"></i>
                                     </a>
                                 </span>
@@ -117,7 +117,7 @@ class Entrepreneur extends React.Component { // eslint-disable-line react/prefer
                         </div>
                         <div id="collapseNine" className="collapse" aria-labelledby="headingNine" data-parent="#accordion">
                             <div className="card-body">
-                                <p className="light-text mb-0">We’re launching in Canada for now, with plans to expand to other countries shortly after. That doesn’t mean we don’t want to be helpful to you. Please send us a message to <a href="mailto:hello@corl.io">hello@corl.io</a>, and we will try to help you in the meantime. To stay in the loop on Corl and find out when we’re expanding internationally, <a href="#earlyaccess">sign up for our newsletter</a>.</p>
+                                <p className="light-text mb-0">We’re launching in Canada for now, with plans to expand to other countries shortly after. That doesn’t mean we don’t want to be helpful to you. Please send us a message to <a href="mailto:hello@corl.io">hello@corl.io</a>, and we will try to help you in the meantime. To stay in the loop on Corl and find out when we’re expanding internationally, <a href="https://blog.corl.io/">sign up for our newsletter</a>.</p>
                             </div>
                         </div>
                     </div>
@@ -128,10 +128,10 @@ class Entrepreneur extends React.Component { // eslint-disable-line react/prefer
                                     If it’s a Revenue Sharing, then what’s the interest rate?
                     </button>
                                 <span className="card-collapse-icons mr-2 pr-1">
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-plus">
+                                    <a href=" " className="card-collapse-plus">
                                         <i className="fa fa-plus" aria-hidden="true"></i>
                                     </a>
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-minus">
+                                    <a href=" " className="card-collapse-minus">
                                         <i className="fa fa-minus" aria-hidden="true"></i>
                                     </a>
                                 </span>
@@ -150,10 +150,10 @@ class Entrepreneur extends React.Component { // eslint-disable-line react/prefer
                                     Isn’t the cost of your capital high?
                     </button>
                                 <span className="card-collapse-icons mr-2 pr-1">
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-plus">
+                                    <a href=" " className="card-collapse-plus">
                                         <i className="fa fa-plus" aria-hidden="true"></i>
                                     </a>
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-minus">
+                                    <a href=" " className="card-collapse-minus">
                                         <i className="fa fa-minus" aria-hidden="true"></i>
                                     </a>
                                 </span>

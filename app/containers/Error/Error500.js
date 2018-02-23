@@ -4,6 +4,9 @@ import { connect } from 'react-redux';
 import error from '../../images/error-img.png';
 
 class Error500 extends React.Component {
+	componentWillMount() {
+		document.title = "Page not found | Corl";
+	}
 	render() {
 		return (
 			<div className="main-content error-content text-center">

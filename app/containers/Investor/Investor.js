@@ -8,7 +8,9 @@ import ModelInvestor from '../HomePage/ModelInvestor';
 
 class Investor extends React.Component {
   state = { investorModel: false }
-
+  componentWillMount() {
+    document.title = "Investors | Revenue share on the blockchain | Corl";
+  }
   showInvestorModal() {
     return (
       <ModelInvestor

@@ -5,6 +5,9 @@ import Finance from '../../components/companies/Finance/Finance';
 import Stackup from '../../components/companies/Stackup/Stackup';
 import ModelCompany from '../HomePage/ModelCompany';
 class Companies extends React.Component {
+  componentWillMount() {
+    document.title = "Companies | Revenue share on the blockchain | Corl";
+  }
   state = { showModel: false }
   renderModel() {
     return (

@@ -26,7 +26,6 @@ import Press from '../Press/Press';
 import Faq from '../Faq/Faq';
 import Error404 from '../Error/Error404';
 import Error500 from '../Error/Error500';
-import Robot from '../Robot/Robot';
 
 class Router extends React.Component {
 
@@ -35,7 +34,7 @@ class Router extends React.Component {
 
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path='/whitepaper' component={WhitePaper} />
+        <Route path='/crltoken' component={WhitePaper} />
         <Route path='/companies' component={Companies} />
         <Route path='/airdrop' component={AirDrop} />
         <Route path='/term' component={Term} />
@@ -47,7 +46,6 @@ class Router extends React.Component {
         <Route path='/faq' component={Faq} />
         <Route path='/404' component={Error404} />
         <Route path='/500' component={Error500} />
-        <Route path='/robot.txt' component={Robot} />
         <Route component={Error404} />
       </Switch>
 

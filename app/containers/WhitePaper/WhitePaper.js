@@ -3,6 +3,9 @@ import Banner from '../../components/whitepaper/Banner/Banner';
 import ModelInvestor from '../HomePage/ModelInvestor';
 
 class WhitePaper extends React.Component {
+  componentWillMount() {
+    document.title = "Corl Token | Revenue share on the blockchain | Corl";
+  }
   state = { investorModel: false }
   render() {
     return (

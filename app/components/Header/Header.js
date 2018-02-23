@@ -16,28 +16,28 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
-                  <a className="nav-link" onClick={() => this.props.history.push('/whitepaper')}>Whitepaper</a>
+                  <a className="nav-link" href="" onClick={() => this.props.history.push('/crltoken')}>Whitepaper</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" onClick={() => this.props.history.push('/airdrop')}>Airdrop Program</a>
+                  <a className="nav-link" href="" onClick={() => this.props.history.push('/airdrop')}>Airdrop Program</a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="https://bitcointalk.org/index.php?topic=2876865.msg29553585#msg29553585" target="_blank">Bounty Program</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" onClick={() => this.props.history.push('/companies')}>For Companies</a>
+                  <a className="nav-link" href="" onClick={() => this.props.history.push('/companies')}>For Companies</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" onClick={() => this.props.history.push('/investor')}>For Investors</a>
+                  <a className="nav-link" href="" onClick={() => this.props.history.push('/investor')}>For Investors</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" onClick={() => this.props.history.push('/about')}>About</a>
+                  <a className="nav-link" href="" onClick={() => this.props.history.push('/about')}>About</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="https://blog.corl.io/">Blog</a>
+                  <a className="nav-link" href="" href="https://blog.corl.io/">Blog</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="https://t.me/corltoken"><i className="fa fa-telegram"></i> Join us on Telegram</a>
+                  <a className="nav-link" href="" href="https://t.me/corltoken"><i className="fa fa-telegram"></i> Join us on Telegram</a>
                 </li>
               </ul>
             </div>

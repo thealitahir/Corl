@@ -1,5 +1,7 @@
 import React from 'react';
 import "./revenue.css";
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 import chart from '../../../images/rbf-chart.svg';
 
 class Revenue extends React.Component { // eslint-disable-line react/prefer-stateless-function
@@ -39,7 +41,7 @@ class Revenue extends React.Component { // eslint-disable-line react/prefer-stat
                     <h4 className="similar-subHeading">Got questions?</h4>
                     <p className="light-text mb-0">We've built a comprehensive list of FAQs to answer your questions and make your visit worthwhile.</p>
                     <div className="container-inner-padd choose-corl-inner pb-0 mb-0">
-                      <a href="#" className="btn btn-early-access d-inline-block">View FAQs</a>
+                      <a href="" onClick={() => this.props.history.push('/faq')} className="btn btn-early-access d-inline-block">View FAQs</a>
                     </div>
                   </div>
                 </div>
@@ -52,4 +54,4 @@ class Revenue extends React.Component { // eslint-disable-line react/prefer-stat
   }
 }
 
-export default Revenue;
+export default withRouter(connect(null, null)(Revenue)); ;

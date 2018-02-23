@@ -30,6 +30,7 @@ class Inquiry extends React.Component { // eslint-disable-line react/prefer-stat
                     <h3>Recent Coverage</h3>
                     <div className="press-coverage-list">
                         <ul>
+                            <li>February 20, 2018 - Cryptocurrency Investing:&nbsp;<a href="http://www.bitcoincanada.org/benefits-merging-blockchain-crowdfunding-revenue-sharing/" target="_blank" rel="noopener">CORL: The first token to represent equity ownership in a company</a></li>
                             <li>January 26, 2018 – Bitcoin Canada:&nbsp;<a href="http://www.bitcoincanada.org/benefits-merging-blockchain-crowdfunding-revenue-sharing/" target="_blank" rel="noopener">The Benefits of Merging Blockchain, Crowdfunding and Revenue Sharing</a></li>
                             <li>January 23, 2018 – TechBullion:&nbsp;<a href="https://www.techbullion.com/meet-corl-new-solutions-startups-investors/" target="_blank" rel="noopener">Meet Corl: New Solutions for Startups &amp; Investors</a></li>
                             <li>January 16, 2018 – CryptoNinjas:&nbsp;<a href="https://www.cryptoninjas.net/2018/01/16/revenue-share-token-corl-partners-mlg-blockchain-community/">Revenue share token Corl partners with MLG Blockchain to build community</a></li>

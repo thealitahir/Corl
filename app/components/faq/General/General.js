@@ -14,10 +14,10 @@ class General extends React.Component { // eslint-disable-line react/prefer-stat
                                     How does Revenue Sharing work?
                     </button>
                                 <span className="card-collapse-icons mr-2 pr-1">
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-plus">
+                                    <a href="" className="card-collapse-plus">
                                         <i className="fa fa-plus" aria-hidden="true"></i>
                                     </a>
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-minus">
+                                    <a href="" className="card-collapse-minus">
                                         <i className="fa fa-minus" aria-hidden="true"></i>
                                     </a>
                                 </span>
@@ -26,7 +26,7 @@ class General extends React.Component { // eslint-disable-line react/prefer-stat
                         <div id="collapseOne" className="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div className="card-body pr-4">
                                 <p className="light-text">We created Corl to reshape the process of raising capital for early growth businesses through flexible and entrepreneur-friendly financing terms. With no dilution, no loss of control, and no fixed repayment schedule, entrepreneurs can stay focused on growing their businesses. Revenue Sharing works like a royalty. Your monthly loan payment is based on a percentage of your monthly top-line revenue. If your revenues drop, so do your payments.</p>
-                                <p className="light-text mb-0">Our Revenue Sharing matures when a predefined total repayment cap is reached, and we target a 5-year payback term, depending on your unique situation. If your revenues grow faster than planned, you pay back the loan a little faster; if they are slower, then your payback is slower. Corl’s financing solution aligns our investors with your sales growth goals. We’re here to help you grow – on your terms. <a href="#earlyaccess">Request Early Access.</a></p>
+                                <p className="light-text mb-0">Our Revenue Sharing matures when a predefined total repayment cap is reached, and we target a 5-year payback term, depending on your unique situation. If your revenues grow faster than planned, you pay back the loan a little faster; if they are slower, then your payback is slower. Corl’s financing solution aligns our investors with your sales growth goals. We’re here to help you grow – on your terms. <a href="" onClick={() => this.props.setModelFlag(true)}>Request Early Access.</a></p>
                             </div>
                         </div>
                     </div>
@@ -37,10 +37,10 @@ class General extends React.Component { // eslint-disable-line react/prefer-stat
                                     What is Capital-as-a-Service (CaaS)?
                     </button>
                                 <span className="card-collapse-icons mr-2 pr-1">
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-plus">
+                                    <a className="card-collapse-plus">
                                         <i className="fa fa-plus" aria-hidden="true"></i>
                                     </a>
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-minus">
+                                    <a className="card-collapse-minus">
                                         <i className="fa fa-minus" aria-hidden="true"></i>
                                     </a>
                                 </span>
@@ -64,10 +64,10 @@ class General extends React.Component { // eslint-disable-line react/prefer-stat
                                     When will Corl launch to the public?
                     </button>
                                 <span className="card-collapse-icons mr-2 pr-1">
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-plus">
+                                    <a href="" className="card-collapse-plus">
                                         <i className="fa fa-plus" aria-hidden="true"></i>
                                     </a>
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-minus">
+                                    <a href="" className="card-collapse-minus">
                                         <i className="fa fa-minus" aria-hidden="true"></i>
                                     </a>
                                 </span>
@@ -75,7 +75,7 @@ class General extends React.Component { // eslint-disable-line react/prefer-stat
                         </div>
                         <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                             <div className="card-body">
-                                <p className="light-text mb-0">Our team is working hard, but we’ll let you know as soon as we’re ready. Before we launch we’ll be opening up an early Beta version to a small group of our applicants, so hurry and reserve your spot by <a href="#earlyaccess">requesting early access</a>!</p>
+                                <p className="light-text mb-0">Our team is working hard, but we’ll let you know as soon as we’re ready. Before we launch we’ll be opening up an early Beta version to a small group of our applicants, so hurry and reserve your spot by <a  href="" onClick={() => this.props.setModelFlag(true)}>requesting early access</a>!</p>
                             </div>
                         </div>
                     </div>
@@ -86,10 +86,10 @@ class General extends React.Component { // eslint-disable-line react/prefer-stat
                                     I have other questions, how do I reach you?
                     </button>
                                 <span className="card-collapse-icons mr-2 pr-1">
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-plus">
+                                    <a href="" className="card-collapse-plus">
                                         <i className="fa fa-plus" aria-hidden="true"></i>
                                     </a>
-                                    <a href="https://corl.io/ufaqs/revenue-based-financing-work/" className="card-collapse-minus">
+                                    <a href="" className="card-collapse-minus">
                                         <i className="fa fa-minus" aria-hidden="true"></i>
                                     </a>
                                 </span>

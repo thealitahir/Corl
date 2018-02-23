@@ -6,13 +6,8 @@ import FbPixel from '../App/FbPixel'
 import $ from 'jquery'
 
 class AirDrop extends React.Component {
-	// constructor() {
-	// 	super();
-
-	// 	React.trackCustom('Viewed Airdrop Page', {})
-
-	// }
 	componentWillMount() {
+		document.title = "Join the Corl Token Airdrop!";
 		FbPixel.trackCustom('Viewed Airdrop Page', {})
 		$(function () {
 			$('a[href*="#"]:not([href="#"].animatedowmn)').click(function () {
@@ -20,6 +15,7 @@ class AirDrop extends React.Component {
 					var target = $(this.hash);
 					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 					if (target.length) {
+						FbPixel.trackCustom('Clicked Join Airdrop', {})
 						$('html, body').animate({
 							scrollTop: target.offset().top - 150
 						}, 1000);
@@ -28,13 +24,6 @@ class AirDrop extends React.Component {
 				}
 			});
 		});
-		// $(window).scroll(function () {
-		// 	if ($(this).scrollTop() > 200) {
-		// 		$('.description-bar').addClass("getFix");
-		// 	} else if ($(this).scrollTop() < 200) {
-		// 		$('.description-bar').addClass("getFix");
-		// 	}
-		// });
 		$('.description-bar').addClass("getFix");
 	}
 

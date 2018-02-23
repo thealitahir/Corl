@@ -1,13 +1,27 @@
 import React from 'react';
 import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
+import FbPixel from '../App/FbPixel'
 
 class ModelInvestor extends React.Component {
-  state = { entrepreneur: false, investor: false, form: true, country: '' }
+  state = { entrepreneur: false, investor: false, form: true, country: '', FNAME: '', LNAME: '', EMAIL: '', REF_CODE: '', INVEST_AMT: '', COMPANY: '', USER_TYPE: '' }
   selectCountry(val) {
     this.setState({ country: val });
   }
+  handleFName(e) {
+    this.setState({ FNAME: e.target.value })
+  }
+  handleLName(e) {
+    this.setState({ LNAME: e.target.value })
+  }
+  handleEmail(e) {
+    this.setState({ EMAIL: e.target.value })
+  }
+  handleInvest(e) {
+    this.setState({ INVEST_AMT: e.target.value })
+  }
+
   renderForm() {
-    const { country } = this.state;
+    const { country, FNAME, LNAME, EMAIL, INVEST_AMT } = this.state;
     return (
       <div className="modal-body modal-body-first">
         <h2>Keep up with Corl News & Announcements</h2>
@@ -16,13 +30,13 @@ class ModelInvestor extends React.Component {
         <div className="investing-form">
           <form>
             <div className="investing-field">
-              <input className="input-field" type="text" placeholder="Your First Name" required="" />
+              <input className="input-field" type="text" value={this.state.FNAME} onChange={this.handleFName.bind(this)} placeholder="Your First Name" required />
             </div>
             <div className="investing-field">
-              <input className="input-field" type="text" placeholder="Your Last Name" required="" />
+              <input className="input-field" type="text" value={this.state.LNAME} onChange={this.handleLName.bind(this)} placeholder="Your Last Name" required />
             </div>
             <div className="investing-field">
-              <input className="input-field" type="email" placeholder="Your Email Address" required="" />
+              <input className="input-field" value={this.state.EMAIL} onChange={this.handleEmail.bind(this)} type="email" placeholder="Your Email Address" required />
             </div>
             <div>
               <div className="form-field">
@@ -30,9 +44,9 @@ class ModelInvestor extends React.Component {
                   value={country}
                   onChange={(val) => this.selectCountry(val)} />
               </div>
-              <div className="form-field">
+              {/* <div className="form-field">
                 <label>Please indicate the amount with which you want to participate in the token sale (in USD).</label>
-                <select name="INVEST_AMT" required="" className="select-field">
+                <select name="INVEST_AMT" value={this.state.INVEST_AMT} onChange={this.handleInvest.bind(this)} required className="select-field">
                   <option value="">Choose an amount</option>
                   <option value="USD < 100">USD &lt; 100</option>
                   <option value="USD 100 - 1000">USD 100 - 1000</option>
@@ -42,12 +56,38 @@ class ModelInvestor extends React.Component {
                   <option value="USD 50,000 - 100,000">USD 50,000 - 100,000</option>
                   <option value="USD > 100,000">USD &gt; 100,000</option>
                 </select>
-              </div>
+              </div> */}
             </div>
 
 
             <div className="mc_form_submit_subscription text-center my-3">
-              <input onClick={() => { this.setState({ form: false }) }} type="submit" value="Join Waitlist" />
+              <input type="submit" value="Join Waitlist"
+                onClick={() => {
+                  FbPixel.trackCustom('Early Access Signup - Submit', {});
+                  this.setState({ entrepreneur: false, investor: false });
+                  fetch('https://us13.api.mailchimp.com/3.0/lists/76a7c94746/members', {
+                    method: 'POST',
+                    headers: {
+                      'Authorization': 'apikey 460949c257c9c616313928b054f967df-us13',
+                      'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                      "FNAME": FNAME,
+                      "LNAME": LNAME,
+                      "email_address": EMAIL,
+                      "email_type": "html",
+                      "status": "subscribed",
+                      "COUNTRY": country,
+                      "INVEST_AMT": INVEST_AMT
+                    }
+                    )
+                  }).then(res => {
+                    this.setState({ form: false });
+
+                  })
+
+                }}
+              />
             </div>
           </form>
         </div>

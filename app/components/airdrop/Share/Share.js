@@ -8,14 +8,7 @@ import {
 } from 'react-share';
 
 class Share extends React.Component { // eslint-disable-line react/prefer-stateless-function
-    // state = {
-    //     visitedFacebook: false,
-    //     visitedForm: false
-    // }
-    // abc() {
-    //     console.log('ahbdsahbh')
-    //     debugger;
-    // }
+
     render() {
         return (
             <div className="airdrop-container airdrop-container-share" id="airdrop-tasks">
@@ -23,7 +16,7 @@ class Share extends React.Component { // eslint-disable-line react/prefer-statel
                 <div className="row">
                     <div className="col col-12 col-lg-4">
                         <div className="et_pb_blurb mx-4">
-                            <a className="et_pb_blurb_content p-4">
+                            <a className="et_pb_blurb_content p-4" href="https://t.me/corltoken" target="_blank">
                                 <div className="et_pb_main_blurb_image m-3">
                                     <img src={telegram} alt="Join Telegram" className="et-waypoint" />
                                 </div>
