@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-// import error from '../../images/error-img.png';
+import error from '../../images/error-img.png';
 
 class Error404 extends React.Component {
 	componentWillMount() {
