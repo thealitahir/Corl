@@ -40,7 +40,6 @@ class App extends React.Component {
 
       <div className="off-canvas-container">
         <MetaTags>
-          <title>Page 1</title>
           <meta name="description" content="Corl is aiming to create the world’s first regulatory-compliant revenue-sharing token designed to support &amp; participate in the growth of emerging companies." />
           <link rel="canonical" href="https://corl.io/" />
           <meta property="og:locale" content="en_US" />
