@@ -30,6 +30,12 @@ const ReactBoilerplate = {
         'sanitize.css',
       ],
 
+      module: {
+        loaders: [
+          { test: /\.xml$/, loader: 'xml-loader' } // will load all .xml files with xml-loader by default
+        ]
+      },
+
       /**
        * Specify any additional dependencies here. We include core-js and lodash
        * since a lot of our dependencies depend on them and they get picked up by webpack.
