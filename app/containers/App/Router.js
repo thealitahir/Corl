@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import $ from 'jquery';
 import HomePage from 'containers/HomePage';
 import WhitePaper from '../WhitePaper/WhitePaper';
 import Companies from '../Companies/Companies';
@@ -18,6 +19,9 @@ import Sitemap from '../Sitemap/Sitemap';
 class Router extends React.Component {
 
   render() {
+    $(document).ready(function () {
+      $(window).scrollTop(0);
+    });
     return (
       <Switch>
         <Route exact path="/" component={HomePage} />

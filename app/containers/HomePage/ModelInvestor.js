@@ -39,7 +39,7 @@ class ModelInvestor extends React.Component {
               <input className="input-field" value={this.state.EMAIL} onChange={this.handleEmail.bind(this)} type="email" placeholder="Your Email Address" required />
             </div>
             <div>
-              <div className="form-field">
+              <div className="form-field country-style">
                 <CountryDropdown className="select-field"
                   value={country}
                   onChange={(val) => this.selectCountry(val)} />

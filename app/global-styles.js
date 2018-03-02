@@ -87,6 +87,9 @@ injectGlobal`
     max-width: 1920px;
     margin: auto;
   }
+  .country-style{
+    width: 60%;
+  }
   .btn-early-access{
     display: inline-block;
     margin-top: 20px;

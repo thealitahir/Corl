@@ -59,9 +59,6 @@ class Contact extends React.Component {
 
             <div className="col-lg-4">
               <h1>Connect With Us!</h1>
-              <div aria-hidden="false">
-                <pre className="ng-binding" tabIndex="0">[addthis tool=addthis_horizontal_follow_toolbox]</pre>
-              </div>
             </div>
           </div>
         </div>

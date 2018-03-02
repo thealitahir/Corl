@@ -39,10 +39,10 @@ class Model extends React.Component {
               <input className="input-field" type="text" value={this.state.FNAME} onChange={this.handleFName.bind(this)} name="FNAME" placeholder="Your First Name" required />
             </div>
             <div className="investing-field">
-              <input className="input-field" type="text" value={this.state.LNAME} onChange={this.handleLName.bind(this)} name="LNAME" placeholder="Your Last Name" required/>
+              <input className="input-field" type="text" value={this.state.LNAME} onChange={this.handleLName.bind(this)} name="LNAME" placeholder="Your Last Name" required />
             </div>
             <div className="investing-field">
-              <input className="input-field" type="email" value={this.state.EMAIL} onChange={this.handleEmail.bind(this)} name="EMAIL" placeholder="Your Work Email" required/>
+              <input className="input-field" type="email" value={this.state.EMAIL} onChange={this.handleEmail.bind(this)} name="EMAIL" placeholder="Your Work Email" required />
             </div>
             <div className="investing-field">
               <input className="input-field" type="hidden" name="REF_CODE" value="" />
@@ -55,7 +55,7 @@ class Model extends React.Component {
             {
               this.state.entrepreneur ?
                 <div className="investing-field">
-                  <input className="input-field" value={this.state.COMPANY} onChange={this.handleCompany.bind(this)} name="COMPANY" type="text" placeholder="Your Company Name"  />
+                  <input className="input-field" value={this.state.COMPANY} onChange={this.handleCompany.bind(this)} name="COMPANY" type="text" placeholder="Your Company Name" />
                 </div>
                 :
                 null
@@ -63,7 +63,7 @@ class Model extends React.Component {
             {
               this.state.investor ?
                 <div>
-                  <div className="form-field">
+                  <div className="form-field country-style">
                     <CountryDropdown className="select-field"
                       value={country}
                       onChange={(val) => this.selectCountry(val)} />
